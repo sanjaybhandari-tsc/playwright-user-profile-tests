@@ -1,0 +1,82 @@
+{
+  "personalDetails": {
+    "firstName": "Aman",
+    "middleName": "",
+    "lastName": "Sharma",
+    "dateOfBirth": "",
+    "gender": "",
+    "maritalStatus": "",
+    "phone": "",
+    "employeeSeries": "ES-106",
+    "joiningDate": "",
+    "skills": []
+  },
+  "workDetails": {
+    "workEmail": "sanjay.bhandari+pwtesting2@techsuperiors.com",
+    "location": "",
+    "role": "",
+    "employmentStatus": "Intern",
+    "employmentType": "Part Time",
+    "workMode": "Remote",
+    "businessUnit": "",
+    "holidayPlan": "",
+    "department": "HR Department",
+    "designation": "Human Resource Manger",
+    "grade": "G4",
+    "band": "B3",
+    "reportingManager": "",
+    "hrManager": "",
+    "l2Manager": "",
+    "associateManager": [],
+    "protectDocumentRestrictedAccess": ""
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": "",
+    "onboardingPolicy": "",
+    "shiftPolicy": "",
+    "attendancePolicy": "",
+    "leavePolicy": "TSC Leave Policy - 01",
+    "reimbursementPolicy": "",
+    "offboardingPolicy": "",
+    "overtimePolicy": ""
+  },
+  "uploadDocument": {
+    "employeeAgreements": [{ "fileName": "agreement.pdf", "filePath": "test-data/files/agreement.pdf" }],
+    "miscellaneous": [],
+    "education": [{ "fileName": "degree.pdf", "filePath": "test-data/files/degree.pdf" }],
+    "previousEmployment": [{ "fileName": "experience.pdf", "filePath": "test-data/files/experience.pdf" }],
+    "onboarding": [{ "fileName": "onboarding.pdf", "filePath": "test-data/files/onboarding.pdf" }],
+    "incomeTax": [{ "fileName": "pan.pdf", "filePath": "test-data/files/pan.pdf" }],
+    "identity": [
+      { "fileName": "aadhar.pdf", "filePath": "test-data/files/aadhar.pdf" }
+    ],
+    "medical": [],
+    "payroll": [],
+    "exit": [],
+    "employeeLetters": [{ "fileName": "offer_letter.pdf", "filePath": "test-data/files/offer_letter.pdf" }],
+    "assets": [{ "fileName": "laptop_hand_over.pdf", "filePath": "test-data/files/laptop_hand_over.pdf" }],
+    "salaryAppraisals": [],
+    "signatures": [{ "fileName": "signature.pdf", "filePath": "test-data/files/signature.pdf" }]
+  },
+  "financeDetails": {
+    "legalEntity": "",
+    "payGroup": "",
+    "ctc": "1500000",
+    "bonuses": [
+      {
+        "bonusName": "Variable Pay",
+        "bonusType": "Percentage",
+        "percentage": "5",
+        "value": "10000",
+        "payoutMonth": "2026-11",
+        "note": "Performance bonus"
+      }
+    ],
+    "payrollDetails": {
+      "providentFundEligible": true,
+      "esiEligible": true,
+      "lwfEligible": false
+    },
+    "taxRegime": ""
+  }
+}

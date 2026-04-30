@@ -1,0 +1,36 @@
+CTX CHECK: function undefined
+CTX CREATED: function
+data {
+  maritalStatus: 'Unmarried',
+  gender: 'Other',
+  dateOfBirth: '2000-01-01',
+  joiningDate: '2008-04-28',
+  skills: [ 'Python' ],
+  id: 'user_04',
+  firstName: 'Test',
+  middleName: 'Edge',
+  lastName: 'Case'
+}
+ Selecting skill: Python
+Options: [ 'Python' ]
+First Name → Expected: Test
+First Name → Actual: Test
+ First Name matches
+Middle Name → Expected: Edge
+Middle Name → Actual: Edge
+ Match
+data {
+  role: 'Fake Role',
+  protectDocumentRestrictedAccess: false,
+  workEmail: 'sanjay.bhandari+pwtesting3@techsuperiors.com',
+  employmentStatus: 'Contract',
+  employmentType: 'Part Time',
+  workMode: 'Remote',
+  department: 'HR',
+  grade: 'G0',
+  band: 'B0',
+  reportingManager: 'Unknown',
+  hrManager: 'Unknown',
+  l2Manager: 'Unknown',
+  associateManager: []
+}

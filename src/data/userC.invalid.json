@@ -1,0 +1,71 @@
+{
+  "personalDetails": {
+    "firstName": "Test",
+    "middleName": "Edge",
+    "lastName": "Case",
+    "dateOfBirth": "",
+    "gender": "",
+    "maritalStatus": "",
+    "phone": "",
+    "employeeSeries": "",
+    "joiningDate": "",
+    "skills": []
+  },
+  "workDetails": {
+    "workEmail": "sanjay.bhandari+pwtesting3@techsuperiors.com",
+    "location": "",
+    "role": "Fake Role",
+    "employmentStatus": "Contract",
+    "employmentType": "Part Time",
+    "workMode": "Remote",
+    "businessUnit": "",
+    "holidayPlan": "",
+    "department": "HR",
+    "designation": "",
+    "grade": "G0",
+    "band": "B0",
+    "reportingManager": "Unknown",
+    "hrManager": "Unknown",
+    "l2Manager": "Unknown",
+    "associateManager": [],
+    "protectDocumentRestrictedAccess": false
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": false,
+    "onboardingPolicy": "",
+    "shiftPolicy": "",
+    "attendancePolicy": "",
+    "leavePolicy": "",
+    "reimbursementPolicy": "",
+    "offboardingPolicy": "",
+    "overtimePolicy": ""
+  },
+  "uploadDocument": {
+    "employeeAgreements": [],
+    "miscellaneous": [],
+    "education": [],
+    "previousEmployment": [],
+    "onboarding": [],
+    "incomeTax": [],
+    "identity": [],
+    "medical": [],
+    "payroll": [],
+    "exit": [],
+    "employeeLetters": [],
+    "assets": [],
+    "salaryAppraisals": [],
+    "signatures": []
+  },
+  "financeDetails": {
+    "legalEntity": "INVALID",
+    "payGroup": "INVALID",
+    "ctc": "0",
+    "bonuses": [],
+    "payrollDetails": {
+      "providentFundEligible": false,
+      "esiEligible": false,
+      "lwfEligible": false
+    },
+    "taxRegime": ""
+  }
+}

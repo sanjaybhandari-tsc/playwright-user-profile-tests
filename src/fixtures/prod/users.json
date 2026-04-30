@@ -1,0 +1,12 @@
+[
+  { "id": 1, "firstName": "Prod",  "lastName": "UserOne",   "email": "prod.user1@yourapp.com",  "phone": "9000000001", "gender": "Male",   "dob": "1990-01-01", "department": "Engineering", "role": "Developer",  "address": "1 Prod Street, City" },
+  { "id": 2, "firstName": "Prod",  "lastName": "UserTwo",   "email": "prod.user2@yourapp.com",  "phone": "9000000002", "gender": "Female", "dob": "1992-02-02", "department": "HR",          "role": "Manager",    "address": "2 Prod Street, City" },
+  { "id": 3, "firstName": "Prod",  "lastName": "UserThree", "email": "prod.user3@yourapp.com",  "phone": "9000000003", "gender": "Male",   "dob": "1993-03-03", "department": "Finance",     "role": "Analyst",    "address": "3 Prod Street, City" },
+  { "id": 4, "firstName": "Prod",  "lastName": "UserFour",  "email": "prod.user4@yourapp.com",  "phone": "9000000004", "gender": "Female", "dob": "1994-04-04", "department": "Marketing",   "role": "Executive",  "address": "4 Prod Street, City" },
+  { "id": 5, "firstName": "Prod",  "lastName": "UserFive",  "email": "prod.user5@yourapp.com",  "phone": "9000000005", "gender": "Male",   "dob": "1995-05-05", "department": "Engineering", "role": "Lead",       "address": "5 Prod Street, City" },
+  { "id": 6, "firstName": "Prod",  "lastName": "UserSix",   "email": "prod.user6@yourapp.com",  "phone": "9000000006", "gender": "Female", "dob": "1996-06-06", "department": "Design",      "role": "Designer",   "address": "6 Prod Street, City" },
+  { "id": 7, "firstName": "Prod",  "lastName": "UserSeven", "email": "prod.user7@yourapp.com",  "phone": "9000000007", "gender": "Male",   "dob": "1997-07-07", "department": "Operations",  "role": "Supervisor", "address": "7 Prod Street, City" },
+  { "id": 8, "firstName": "Prod",  "lastName": "UserEight", "email": "prod.user8@yourapp.com",  "phone": "9000000008", "gender": "Female", "dob": "1998-08-08", "department": "Support",     "role": "Agent",      "address": "8 Prod Street, City" },
+  { "id": 9, "firstName": "Prod",  "lastName": "UserNine",  "email": "prod.user9@yourapp.com",  "phone": "9000000009", "gender": "Male",   "dob": "1999-09-09", "department": "Legal",       "role": "Counsel",    "address": "9 Prod Street, City" },
+  { "id": 10,"firstName": "Prod",  "lastName": "UserTen",   "email": "prod.user10@yourapp.com", "phone": "9000000010", "gender": "Female", "dob": "2000-10-10", "department": "IT",          "role": "Admin",      "address": "10 Prod Street, City" }
+]

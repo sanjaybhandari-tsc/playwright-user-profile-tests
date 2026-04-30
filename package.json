@@ -1,0 +1,34 @@
+{
+  "name": "playwright-user-profile-tests",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:dev": "cross-env TEST_ENV=dev playwright test",
+    "test:staging": "cross-env TEST_ENV=staging playwright test",
+    "test:prod": "cross-env TEST_ENV=prod playwright test",
+    "headed": "playwright test --headed",
+    "debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "report:html": "npx playwright show-report",
+    "report:allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.7.1"
+  },
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "fs": "^0.0.1-security",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.18.0",
+    "xlsx": "^0.18.5"
+  }
+}

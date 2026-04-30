@@ -1,0 +1,71 @@
+{
+  "personalDetails": {
+    "firstName": "Neha",
+    "middleName": "",
+    "lastName": "Verma",
+    "dateOfBirth": "1998-01-20",
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "phone": "8888888888",
+    "employeeSeries": "ES-107",
+    "joiningDate": "2025-06-01",
+    "skills": ["JavaScript"]
+  },
+  "workDetails": {
+    "workEmail": "neha.verma@company.com",
+    "location": "Dehradun",
+    "role": "QA Engineer",
+    "employmentStatus": "Intern",
+    "employmentType": "Part Time",
+    "workMode": "Hybrid",
+    "businessUnit": "QA",
+    "holidayPlan": "Standard Plan",
+    "department": "Quality",
+    "designation": "QA-1",
+    "grade": "G2",
+    "band": "B1",
+    "reportingManager": "Amit Sharma",
+    "hrManager": "Neha Verma",
+    "l2Manager": "Vikram Singh",
+    "associateManager": [],
+    "protectDocumentRestrictedAccess": true
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": false,
+    "onboardingPolicy": "April Policy",
+    "shiftPolicy": "Half Weekend",
+    "attendancePolicy": "Work From Home Policy",
+    "leavePolicy": "Default Leave Policy",
+    "reimbursementPolicy": "Expense Policy 1",
+    "offboardingPolicy": "New Offboarding Policy",
+    "overtimePolicy": "Overtime Policy"
+  },
+  "uploadDocument": {
+    "employeeAgreements": [],
+    "miscellaneous": [],
+    "education": [],
+    "previousEmployment": [],
+    "onboarding": [],
+    "incomeTax": [],
+    "identity": [],
+    "medical": [],
+    "payroll": [],
+    "exit": [],
+    "employeeLetters": [],
+    "assets": [],
+    "salaryAppraisals": [],
+    "signatures": []
+  },
+  "financeDetails": {
+    "legalEntity": "OPTION_SELECTED",
+    "payGroup": "OPTION_SELECTED",
+    "ctc": "900000",
+    "bonuses": [],
+    "payrollDetails": {
+      "providentFundEligible": false,
+      "esiEligible": false,
+      "lwfEligible": false
+    },
+    "taxRegime": "Old Regime"
+  }
+}

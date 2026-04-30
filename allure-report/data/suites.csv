@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","47413","User 1: Aman Sharma","chromium","2026-04-30","failed","2026-04-30","","createUserProfile.spec.js","",""
+"","54976","User 2: Rohan Negi","chromium","2026-04-30","failed","2026-04-30","","createUserProfile.spec.js","",""
+"","26","Bulk Summary","chromium","2026-04-30","passed","2026-04-30","","createUserProfile.spec.js","",""
+"","54229","User 3: Rohan Negi","chromium","2026-04-30","failed","2026-04-30","","createUserProfile.spec.js","",""
+"","31605","User 4: Test Case","chromium","2026-04-30","failed","2026-04-30","","createUserProfile.spec.js","",""
