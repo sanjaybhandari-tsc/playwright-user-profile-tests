@@ -7,8 +7,13 @@ const user = {
     gender: "Male", // options: ["Male", "Female", "Other"]
     maritalStatus: "Unmarried", // options: ["Married", "Unmarried"]
     phone: "1234567890",
-    employeeSeries: "ES-105",
+    employeeSeries: "CollectivWork (CW-EMP001)",
     // employeeSeries: "Tech Superior (TS-EMP001)",
+  //   'CollectivWork (CW-EMP001)',
+  // 'Tech Superior (TS-EMP001)',
+  // 'test-02 (CW00000006DeV)',
+  // 'test-050 (CWPS0016DEV)',
+  // 'TSC (TSC00000001)'
     joiningDate: "2025-04-24", // should be past date (<= current date)
     skills: ["JavaScript", "React", "SQL"],
   },

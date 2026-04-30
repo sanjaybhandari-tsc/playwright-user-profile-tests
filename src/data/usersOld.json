@@ -1,0 +1,342 @@
+[
+  
+{
+  "personalDetails": {
+    "id": "user_01",
+    "firstName": "Aman",
+    "middleName": "",
+    "lastName": "Sharma",
+    "dateOfBirth": "",
+    "gender": "",
+    "maritalStatus": "",
+    "phone": "",
+    "employeeSeries": "CollectivWork (CW-EMP001)",
+    "joiningDate": "2025-08-08",
+    "skills": ["Java"]
+  },
+  "workDetails": {
+    "workEmail": "sanjay.bhandari+pwtesting2@techsuperiors.com",
+    "location": "",
+    "role": "",
+    "employmentStatus": "Intern",
+    "employmentType": "Part Time",
+    "workMode": "Remote",
+    "businessUnit": "",
+    "holidayPlan": "",
+    "department": "HR Department",
+    "designation": "Human Resource Manger",
+    "grade": "G4",
+    "band": "B3",
+    "reportingManager": "",
+    "hrManager": "",
+    "l2Manager": "",
+    "associateManager": [],
+    "protectDocumentRestrictedAccess": ""
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": "",
+    "onboardingPolicy": "",
+    "shiftPolicy": "",
+    "attendancePolicy": "",
+    "leavePolicy": "TSC Leave Policy - 01",
+    "reimbursementPolicy": "",
+    "offboardingPolicy": "",
+    "overtimePolicy": ""
+  },
+  "uploadDocument": {
+    "employeeAgreements": [{ "fileName": "agreement.pdf", "filePath": "test-data/files/agreement.pdf" }],
+    "miscellaneous": [],
+    "education": [{ "fileName": "degree.pdf", "filePath": "test-data/files/degree.pdf" }],
+    "previousEmployment": [{ "fileName": "experience.pdf", "filePath": "test-data/files/experience.pdf" }],
+    "onboarding": [{ "fileName": "onboarding.pdf", "filePath": "test-data/files/onboarding.pdf" }],
+    "incomeTax": [{ "fileName": "pan.pdf", "filePath": "test-data/files/pan.pdf" }],
+    "identity": [
+      { "fileName": "aadhar.pdf", "filePath": "test-data/files/aadhar.pdf" }
+    ],
+    "medical": [],
+    "payroll": [],
+    "exit": [],
+    "employeeLetters": [{ "fileName": "offer_letter.pdf", "filePath": "test-data/files/offer_letter.pdf" }],
+    "assets": [{ "fileName": "laptop_hand_over.pdf", "filePath": "test-data/files/laptop_hand_over.pdf" }],
+    "salaryAppraisals": [],
+    "signatures": [{ "fileName": "signature.pdf", "filePath": "test-data/files/signature.pdf" }]
+  },
+  "financeDetails": {
+    "legalEntity": "",
+    "payGroup": "",
+    "ctc": "15000",
+    "bonuses": [
+      {
+        "bonusName": "Variable Pay",
+        "bonusType": "Percentage",
+        "percentage": "5",
+        "value": "10000",
+        "payoutMonth": "2026-11",
+        "note": "Performance bonus"
+      }
+    ],
+    "payrollDetails": {
+      "providentFundEligible": true,
+      "esiEligible": true,
+      "lwfEligible": false
+    },
+    "taxRegime": ""
+  }
+},
+{
+  "personalDetails": {
+    "id": "user_02",
+    "firstName": "Rohan",
+    "middleName": "Pratap",
+    "lastName": "Negi",
+    "dateOfBirth": "1997-11-22",
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "phone": "1234567890",
+    "employeeSeries": "Tech Superior (TS-EMP001)",
+    "joiningDate": "2025-04-24",
+    "skills": ["JavaScript", "React", "SQL"]
+  },
+  "workDetails": {
+    "workEmail": "sanjay.bhandari+pwtesting14@techsuperiors.com",
+    "location": "Dehradun",
+    "role": "Admin Role",
+    "employmentStatus": "Intern",
+    "employmentType": "Full Time",
+    "workMode": "Hybrid",
+    "businessUnit": "Manger Head",
+    "holidayPlan": "Holiday Plan (2026)",
+    "department": "IT Department",
+    "designation": "Software Developer",
+    "grade": "G1",
+    "band": "entry",
+    "reportingManager": "Pepper Stark (COL-0142)",
+    "hrManager": "Tanishq (COL-0138)",
+    "l2Manager": "Neeraj Chauhan (COL-0210)",
+    "associateManager": ["Sonal B (COL-0068)","Tanishq (COL-0138)"],
+    "protectDocumentRestrictedAccess": true
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": true,
+    "onboardingPolicy": "TS Intern Onboarding Policy-01",
+    "shiftPolicy": "Day-Night Shift",
+    "attendancePolicy": "Work From Home Policy",
+    "leavePolicy": "Default Leave Policy",
+    "reimbursementPolicy": "Expense Policy 1",
+    "offboardingPolicy": "New Offboarding Policy",
+    "overtimePolicy": "Overtime Policy"
+  },
+  "uploadDocument": {
+    "employeeAgreements": [{ "fileName": "agreement.pdf", "filePath": "test-data/files/agreement.pdf" }],
+    "miscellaneous": [],
+    "education": [{ "fileName": "degree.pdf", "filePath": "test-data/files/degree.pdf" }],
+    "previousEmployment": [{ "fileName": "experience.pdf", "filePath": "test-data/files/experience.pdf" }],
+    "onboarding": [{ "fileName": "onboarding.pdf", "filePath": "test-data/files/onboarding.pdf" }],
+    "incomeTax": [{ "fileName": "pan.pdf", "filePath": "test-data/files/pan.pdf" }],
+    "identity": [
+      { "fileName": "aadhar.pdf", "filePath": "test-data/files/aadhar.pdf" },
+      { "fileName": "passport.pdf", "filePath": "test-data/files/passport.pdf" }
+    ],
+    "medical": [{ "fileName": "medical.pdf", "filePath": "test-data/files/medical.pdf" }],
+    "payroll": [{ "fileName": "bank_details.pdf", "filePath": "test-data/files/bank_details.pdf" }],
+    "exit": [],
+    "employeeLetters": [{ "fileName": "offer_letter.pdf", "filePath": "test-data/files/offer_letter.pdf" }],
+    "assets": [{ "fileName": "laptop_hand_over.pdf", "filePath": "test-data/files/laptop_hand_over.pdf" }],
+    "salaryAppraisals": [{ "fileName": "appraisal_2025.pdf", "filePath": "test-data/files/appraisal_2025.pdf" }],
+    "signatures": [{ "fileName": "signature.pdf", "filePath": "test-data/files/signature.pdf" }]
+  },
+  "financeDetails": {
+    "legalEntity": "Collectiwork",
+    "payGroup": "Collectiv - PG",
+    "ctc": "15000",
+    "bonuses": [
+      {
+        "bonusName": "Variable Pay",
+        "bonusType": "Percentage",
+        "percentage": "5",
+        "value": "10000",
+        "payoutMonth": "2026-11",
+        "note": "Performance bonus"
+      },
+      {
+        "bonusName": "Performance Bonus",
+        "bonusType": "Amount",
+        "percentage": "12",
+        "value": "1000",
+        "payoutMonth": "2026-12",
+        "note": "Onboarding bonus"
+      }
+    ],
+    "payrollDetails": {
+      "providentFundEligible": true,
+      "esiEligible": false,
+      "lwfEligible": true
+    },
+    "taxRegime": "Old Regime"
+  }
+},
+{
+  "personalDetails": {
+    "id": "user_03",
+    "firstName": "Rohan",
+    "middleName": "Pratap",
+    "lastName": "Negi",
+    "dateOfBirth": "1997-11-22",
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "phone": "1234567890",
+    "employeeSeries": "Tech Superior (TS-EMP001)",
+    "joiningDate": "2025-04-24",
+    "skills": ["JavaScript", "React", "SQL"]
+  },
+  "workDetails": {
+    "workEmail": "sanjay.bhandari+pwtesting13@techsuperiors.com",
+    "location": "Dehradun",
+    "role": "Admin Role",
+    "employmentStatus": "Intern",
+    "employmentType": "Full Time",
+    "workMode": "Hybrid",
+    "businessUnit": "Manger Head",
+    "holidayPlan": "Holiday Plan (2026)",
+    "department": "IT Department",
+    "designation": "Software Developer",
+    "grade": "G1",
+    "band": "entry",
+    "reportingManager": "Pepper Stark (COL-0142)",
+    "hrManager": "Tanishq (COL-0138)",
+    "l2Manager": "Neeraj Chauhan (COL-0210)",
+    "associateManager": ["Sonal B (COL-0068)","Tanishq (COL-0138)"],
+    "protectDocumentRestrictedAccess": true
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": true,
+    "onboardingPolicy": "TS Intern Onboarding Policy-01",
+    "shiftPolicy": "Day-Night Shift",
+    "attendancePolicy": "Work From Home Policy",
+    "leavePolicy": "Default Leave Policy",
+    "reimbursementPolicy": "Expense Policy 1",
+    "offboardingPolicy": "New Offboarding Policy",
+    "overtimePolicy": "Overtime Policy"
+  },
+  "uploadDocument": {
+    "employeeAgreements": [{ "fileName": "agreement.pdf", "filePath": "test-data/files/agreement.pdf" }],
+    "miscellaneous": [],
+    "education": [{ "fileName": "degree.pdf", "filePath": "test-data/files/degree.pdf" }],
+    "previousEmployment": [{ "fileName": "experience.pdf", "filePath": "test-data/files/experience.pdf" }],
+    "onboarding": [{ "fileName": "onboarding.pdf", "filePath": "test-data/files/onboarding.pdf" }],
+    "incomeTax": [{ "fileName": "pan.pdf", "filePath": "test-data/files/pan.pdf" }],
+    "identity": [
+      { "fileName": "aadhar.pdf", "filePath": "test-data/files/aadhar.pdf" },
+      { "fileName": "passport.pdf", "filePath": "test-data/files/passport.pdf" }
+    ],
+    "medical": [{ "fileName": "medical.pdf", "filePath": "test-data/files/medical.pdf" }],
+    "payroll": [{ "fileName": "bank_details.pdf", "filePath": "test-data/files/bank_details.pdf" }],
+    "exit": [],
+    "employeeLetters": [{ "fileName": "offer_letter.pdf", "filePath": "test-data/files/offer_letter.pdf" }],
+    "assets": [{ "fileName": "laptop_hand_over.pdf", "filePath": "test-data/files/laptop_hand_over.pdf" }],
+    "salaryAppraisals": [{ "fileName": "appraisal_2025.pdf", "filePath": "test-data/files/appraisal_2025.pdf" }],
+    "signatures": [{ "fileName": "signature.pdf", "filePath": "test-data/files/signature.pdf" }]
+  },
+  "financeDetails": {
+    "legalEntity": "Collectiwork",
+    "payGroup": "Collectiv - PG",
+    "ctc": "15000",
+    "bonuses": [
+      {
+        "bonusName": "Variable Pay",
+        "bonusType": "Percentage",
+        "percentage": "5",
+        "value": "10000",
+        "payoutMonth": "2026-11",
+        "note": "Performance bonus"
+      },
+      {
+        "bonusName": "Performance Bonus",
+        "bonusType": "Amount",
+        "percentage": "12",
+        "value": "1000",
+        "payoutMonth": "2026-12",
+        "note": "Onboarding bonus"
+      }
+    ],
+    "payrollDetails": {
+      "providentFundEligible": true,
+      "esiEligible": false,
+      "lwfEligible": true
+    },
+    "taxRegime": "Old Regime"
+  }
+},
+{
+  "personalDetails": {
+    "id": "user_04",
+    "firstName": "Test",
+    "middleName": "Edge",
+    "lastName": "Case",
+    "dateOfBirth": "",
+    "gender": "",
+    "maritalStatus": "",
+    "phone": "",
+    "employeeSeries": "",
+    "joiningDate": "",
+    "skills": ["Python"]
+  },
+  "workDetails": {
+    "workEmail": "sanjay.bhandari+pwtesting3@techsuperiors.com",
+    "location": "",
+    "role": "Fake Role",
+    "employmentStatus": "Contract",
+    "employmentType": "Part Time",
+    "workMode": "Remote",
+    "businessUnit": "",
+    "holidayPlan": "",
+    "department": "HR",
+    "designation": "",
+    "grade": "G0",
+    "band": "B0",
+    "reportingManager": "Unknown",
+    "hrManager": "Unknown",
+    "l2Manager": "Unknown",
+    "associateManager": [],
+    "protectDocumentRestrictedAccess": false
+  },
+  "policySetting": {
+    "isProbationDurationApplicable": false,
+    "onboardingPolicy": "",
+    "shiftPolicy": "",
+    "attendancePolicy": "",
+    "leavePolicy": "",
+    "reimbursementPolicy": "",
+    "offboardingPolicy": "",
+    "overtimePolicy": ""
+  },
+  "uploadDocument": {
+    "employeeAgreements": [],
+    "miscellaneous": [],
+    "education": [],
+    "previousEmployment": [],
+    "onboarding": [],
+    "incomeTax": [],
+    "identity": [],
+    "medical": [],
+    "payroll": [],
+    "exit": [],
+    "employeeLetters": [],
+    "assets": [],
+    "salaryAppraisals": [],
+    "signatures": []
+  },
+  "financeDetails": {
+    "legalEntity": "INVALID",
+    "payGroup": "INVALID",
+    "ctc": "15000",
+    "bonuses": [],
+    "payrollDetails": {
+      "providentFundEligible": false,
+      "esiEligible": false,
+      "lwfEligible": false
+    },
+    "taxRegime": ""
+  }
+}
+]

@@ -23,6 +23,8 @@ users.forEach((user, i) => {
 
       try {
         ctx = await createUserFlow(page, user, test);
+        console.log("ctx inside 1st try catch",ctx);
+        
       } catch (err) {
         ctx = err.ctx || ctx;
 
