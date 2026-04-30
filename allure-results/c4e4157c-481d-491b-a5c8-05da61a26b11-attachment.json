@@ -1,3 +1,0 @@
-{
-  "error": "Step 1 fill failed: fill \"middleName\" failed: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('#employeeForm_middle_name')\u001b[22m\n"
-}

@@ -2,3 +2,7 @@ node_modules/
 reports/
 .env.dev
 .env.prod
+reports/
+test-results/
+allure-results/
+allure-report/

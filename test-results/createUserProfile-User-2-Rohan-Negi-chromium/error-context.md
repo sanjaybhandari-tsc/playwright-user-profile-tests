@@ -137,344 +137,346 @@ Error: Submit failed: Submit failed — error toast: "User already registered wi
                   - tab "Employee List" [selected] [ref=e213] [cursor=pointer]:
                     - img [ref=e214]
                     - text: Employee List
-              - tabpanel "Employee List" [ref=e221]:
-                - generic [ref=e223]:
-                  - img "filter" [ref=e225] [cursor=pointer]:
-                    - img [ref=e226]
-                  - radiogroup "segmented control" [ref=e228]:
-                    - generic [ref=e229]:
-                      - generic [ref=e230] [cursor=pointer]:
-                        - radio
-                        - img [ref=e233]
-                      - generic [ref=e235] [cursor=pointer]:
-                        - radio [checked]
-                        - img [ref=e238]
-                  - generic [ref=e241] [cursor=pointer]:
-                    - generic [ref=e243]:
-                      - combobox [ref=e245]
-                      - generic "All Users" [ref=e246]
-                    - generic:
-                      - img
-                  - button "organization View Organization" [ref=e247] [cursor=pointer]:
-                    - img "organization" [ref=e248]
-                    - generic [ref=e249]: View Organization
-                  - button "Add Employee" [ref=e250] [cursor=pointer]:
-                    - generic [ref=e251]: Add Employee
-                - generic [ref=e253]:
-                  - generic [ref=e256] [cursor=pointer]:
-                    - generic [ref=e257]:
-                      - generic [ref=e259]:
-                        - generic [ref=e260]: Absent
-                        - generic [ref=e261]:
-                          - img [ref=e262]
-                          - img [ref=e266]
-                          - img [ref=e269]
-                      - generic [ref=e275]: AU
-                    - generic [ref=e276]:
-                      - heading "A User - COL-0002" [level=5] [ref=e277]
-                      - generic "info@techsuperiors.com" [ref=e278]
-                      - generic [ref=e280]: Software Developer
-                      - generic "Phone number missing" [ref=e281]:
-                        - img [ref=e282]
-                      - generic [ref=e284]:
-                        - img [ref=e286]
-                        - generic [ref=e288]: Online
-                  - generic [ref=e291] [cursor=pointer]:
-                    - generic [ref=e292]:
-                      - generic [ref=e294]:
-                        - generic [ref=e295]: Absent
-                        - generic [ref=e296]:
-                          - img [ref=e297]
-                          - img [ref=e301]
-                          - img [ref=e304]
-                      - generic [ref=e310]: S
-                    - generic [ref=e311]:
-                      - heading "Sai - COL-0004" [level=5] [ref=e312]
-                      - generic "harshith.bonta@techsuperiors.com" [ref=e313]
-                      - generic [ref=e315]: "-"
-                      - generic "Phone number missing" [ref=e316]:
-                        - img [ref=e317]
-                      - generic [ref=e319]:
-                        - img [ref=e321]
-                        - generic [ref=e323]: Away
-                  - generic [ref=e326] [cursor=pointer]:
-                    - generic [ref=e327]:
-                      - generic [ref=e329]:
-                        - generic [ref=e330]: Absent
-                        - generic [ref=e331]:
-                          - img [ref=e332]
-                          - img [ref=e336]
-                          - img [ref=e339]
-                      - img [ref=e347]
-                    - generic [ref=e348]:
-                      - heading "Affan Rao - COL-0005" [level=5] [ref=e349]
-                      - generic "affan.rao@techsuperiors.com" [ref=e350]
-                      - generic [ref=e352]: Software Developer
-                      - generic "Phone number missing" [ref=e353]:
-                        - img [ref=e354]
-                      - generic [ref=e356]:
-                        - img [ref=e358]
-                        - generic [ref=e360]: Away
-                  - generic [ref=e363] [cursor=pointer]:
-                    - generic [ref=e364]:
-                      - generic [ref=e366]:
-                        - generic [ref=e367]: Absent
-                        - generic [ref=e368]:
-                          - img [ref=e369]
-                          - img [ref=e373]
-                          - img [ref=e376]
-                      - generic [ref=e382]: SQ
-                    - generic [ref=e383]:
-                      - heading "Sadiya Q Qamar - COL-0006" [level=5] [ref=e384]
-                      - generic "sadiya.qamar@techsuperiors.com" [ref=e385]
-                      - generic [ref=e387]: HR Business Partner
-                      - generic [ref=e388]: +91 9828377238
-                      - generic [ref=e389]:
-                        - img [ref=e391]
-                        - generic [ref=e393]: Away
-                  - generic [ref=e396] [cursor=pointer]:
-                    - generic [ref=e397]:
-                      - generic [ref=e399]:
-                        - generic [ref=e400]: Absent
-                        - generic [ref=e401]:
-                          - img [ref=e402]
-                          - img [ref=e406]
-                          - img [ref=e409]
-                      - generic [ref=e415]: R
-                    - generic [ref=e416]:
-                      - heading "Riya - COL-0007" [level=5] [ref=e417]
-                      - generic "riya@gmail.com" [ref=e418]
-                      - generic [ref=e420]: "-"
-                      - generic "Phone number missing" [ref=e421]:
-                        - img [ref=e422]
-                      - generic [ref=e424]:
-                        - img [ref=e426]
-                        - generic [ref=e428]: Offline
-                  - generic [ref=e431] [cursor=pointer]:
-                    - generic [ref=e432]:
-                      - generic [ref=e434]:
-                        - generic [ref=e435]: Absent
-                        - generic [ref=e436]:
-                          - img [ref=e437]
-                          - img [ref=e441]
-                          - img [ref=e444]
-                      - generic [ref=e450]: S
-                    - generic [ref=e451]:
-                      - heading "Samay - COL-0012" [level=5] [ref=e452]
-                      - generic "shrishti.semwal+dev1234@techsuperiors.com" [ref=e453]
-                      - generic [ref=e455]: IT Director
-                      - generic [ref=e456]: +91 9876543234
-                      - generic [ref=e457]:
-                        - img [ref=e459]
-                        - generic [ref=e461]: Offline
-                  - generic [ref=e464] [cursor=pointer]:
-                    - generic [ref=e465]:
-                      - generic [ref=e467]:
-                        - generic [ref=e468]: Absent
-                        - generic [ref=e469]:
-                          - img [ref=e470]
-                          - img [ref=e474]
-                          - img [ref=e477]
-                      - generic [ref=e483]: SS
-                    - generic [ref=e484]:
-                      - heading "Shrishti Sem - COL-0013" [level=5] [ref=e485]
-                      - generic "shrishti@collectivsuite.com" [ref=e486]
-                      - generic [ref=e488]: Software Developer
-                      - generic [ref=e489]: +91 9876534567
-                      - generic [ref=e490]:
-                        - img [ref=e492]
-                        - generic [ref=e494]: Offline
-                  - generic [ref=e497] [cursor=pointer]:
-                    - generic [ref=e498]:
-                      - generic [ref=e500]:
-                        - generic [ref=e501]: Absent
-                        - generic [ref=e502]:
-                          - img [ref=e503]
-                          - img [ref=e507]
-                          - img [ref=e510]
-                      - generic [ref=e516]: SD
-                    - generic [ref=e517]:
-                      - heading "Sophia Devis - COL-0020" [level=5] [ref=e518]
-                      - generic "sadiya.qamar+sophia@techsuperiors.com" [ref=e519]
-                      - generic [ref=e521]: "-"
-                      - generic [ref=e522]: +91 9898393982
-                      - generic [ref=e523]:
-                        - img [ref=e525]
-                        - generic [ref=e527]: Offline
-                  - generic [ref=e530] [cursor=pointer]:
-                    - generic [ref=e531]:
-                      - generic [ref=e533]:
-                        - generic [ref=e534]: Absent
-                        - generic [ref=e535]:
-                          - img [ref=e536]
-                          - img [ref=e540]
-                          - img [ref=e543]
-                      - generic [ref=e549]: R
-                    - generic [ref=e550]:
-                      - heading "Rupali - COL-0021" [level=5] [ref=e551]
-                      - generic "sadiya.qamar+rupali@techsuperiors.com" [ref=e552]
-                      - generic [ref=e554]: Human Resources Manager
-                      - generic [ref=e555]: +91 9883874834
-                      - generic [ref=e556]:
-                        - img [ref=e558]
-                        - generic [ref=e560]: Offline
-                  - generic [ref=e563] [cursor=pointer]:
-                    - generic [ref=e564]:
-                      - generic [ref=e566]:
-                        - generic [ref=e567]: Absent
-                        - generic [ref=e568]:
-                          - img [ref=e569]
-                          - img [ref=e573]
-                          - img [ref=e576]
-                      - generic [ref=e582]: AK
-                    - generic [ref=e583]:
-                      - heading "Ankit Kumar - COL-0023" [level=5] [ref=e584]
-                      - generic "ankit.kumar@techsuperiors.com" [ref=e585]
-                      - generic [ref=e587]: Software Developer
-                      - generic [ref=e588]: +91 2343242342
-                      - generic [ref=e589]:
-                        - img [ref=e591]
-                        - generic [ref=e593]: Online
-                  - generic [ref=e596] [cursor=pointer]:
-                    - generic [ref=e597]:
-                      - generic [ref=e599]:
-                        - generic [ref=e600]: Absent
-                        - generic [ref=e601]:
-                          - img [ref=e602]
-                          - img [ref=e606]
-                          - img [ref=e609]
-                      - generic [ref=e615]: AK
-                    - generic [ref=e616]:
-                      - heading "Ankit Kumar - COL-0024" [level=5] [ref=e617]
-                      - generic "ankit.kumar+ankit@techsuperiors.com" [ref=e618]
-                      - generic [ref=e620]: Chief Technology Officer
-                      - generic [ref=e621]: +91 2343242342
-                      - generic [ref=e622]:
-                        - img [ref=e624]
-                        - generic [ref=e626]: Online
-                  - generic [ref=e629] [cursor=pointer]:
-                    - generic [ref=e630]:
-                      - generic [ref=e632]:
-                        - generic [ref=e633]: Absent
-                        - generic [ref=e634]:
-                          - img [ref=e635]
-                          - img [ref=e639]
-                          - img [ref=e642]
-                      - generic [ref=e648]: KT
-                    - generic [ref=e649]:
-                      - heading "Kartikey Tripathi - COL-0025" [level=5] [ref=e650]
-                      - generic "kartkartikey.santosh@techsuperiors.com" [ref=e651]
-                      - generic [ref=e653]: Human Resources Director
-                      - generic [ref=e654]: +91 1232313121
-                      - generic [ref=e655]:
-                        - img [ref=e657]
-                        - generic [ref=e659]: Offline
-                  - generic [ref=e662] [cursor=pointer]:
-                    - generic [ref=e663]:
-                      - generic [ref=e665]:
-                        - generic [ref=e666]: Absent
-                        - generic [ref=e667]:
-                          - img [ref=e668]
-                          - img [ref=e672]
-                          - img [ref=e675]
-                      - generic [ref=e681]: NK
-                    - generic [ref=e682]:
-                      - heading "Nishant Kumar - COL-0008" [level=5] [ref=e683]
-                      - generic "nishant.kumar@techsuperiors.com" [ref=e684]
-                      - generic [ref=e686]: Human Resources Director
-                      - generic [ref=e687]: +91 9876598765
-                      - generic [ref=e688]:
-                        - img [ref=e690]
-                        - generic [ref=e692]: Offline
-                  - generic [ref=e695] [cursor=pointer]:
-                    - generic [ref=e696]:
-                      - generic [ref=e698]:
-                        - generic [ref=e699]: Absent
-                        - generic [ref=e700]:
-                          - img [ref=e701]
-                          - img [ref=e705]
-                          - img [ref=e708]
-                      - generic [ref=e714]: AK
-                    - generic [ref=e715]:
-                      - heading "Ajay Kumar - COL-0011" [level=5] [ref=e716]
-                      - generic "ajay.gupta@techsuperiors.com" [ref=e717]
-                      - generic [ref=e719]: Cybersecurity Analyst
-                      - generic "Phone number missing" [ref=e720]:
-                        - img [ref=e721]
-                      - generic [ref=e723]:
-                        - img [ref=e725]
-                        - generic [ref=e727]: Offline
-                  - generic [ref=e730] [cursor=pointer]:
-                    - generic [ref=e731]:
-                      - generic [ref=e733]:
-                        - generic [ref=e734]: Absent
-                        - generic [ref=e735]:
-                          - img [ref=e736]
-                          - img [ref=e740]
-                          - img [ref=e743]
-                      - img [ref=e751]
-                    - generic [ref=e752]:
-                      - heading "Priyanka Rautela - COL-0015" [level=5] [ref=e753]
-                      - generic "priyanka.rautela@techsuperiors.com" [ref=e754]
-                      - generic [ref=e756]: Chief Technology Officer
-                      - generic [ref=e757]: +91 9882387823
-                      - generic [ref=e758]:
-                        - img [ref=e760]
-                        - generic [ref=e762]: Offline
-                  - generic [ref=e765] [cursor=pointer]:
-                    - generic [ref=e766]:
-                      - generic [ref=e768]:
-                        - generic [ref=e769]: WFH
-                        - generic [ref=e770]:
-                          - img [ref=e771]
-                          - img [ref=e775]
-                          - img [ref=e778]
-                      - generic [ref=e784]: PC
-                    - generic [ref=e785]:
-                      - heading "Palak Chourasia - COL-0019" [level=5] [ref=e786]
-                      - generic "palak.chourasia@techsuperiors.com" [ref=e787]
-                      - generic [ref=e789]: Financial Controller
-                      - generic [ref=e790]: +91 8765456534
-                      - generic [ref=e791]:
-                        - img [ref=e793]
-                        - generic [ref=e795]: Away
-                  - generic [ref=e796]:
-                    - generic [ref=e798]:
-                      - text: Showing
-                      - strong [ref=e799]: 1–16
-                      - text: of
-                      - strong [ref=e800]: "248"
-                      - text: records
-                    - list [ref=e801]:
-                      - listitem [ref=e802]:
-                        - generic [ref=e803]: Previous
-                      - listitem [ref=e804] [cursor=pointer]:
-                        - generic [ref=e805]: "1"
-                      - listitem [ref=e806] [cursor=pointer]:
-                        - generic [ref=e807]: "2"
-                      - listitem [ref=e808] [cursor=pointer]:
-                        - generic [ref=e809]: "3"
-                      - listitem [ref=e810] [cursor=pointer]:
-                        - generic [ref=e811]: "4"
-                      - listitem [ref=e812] [cursor=pointer]:
-                        - generic [ref=e813]: "5"
-                      - listitem [ref=e814] [cursor=pointer]:
-                        - generic [ref=e816]:
-                          - img "double-right" [ref=e817]:
-                            - img [ref=e818]
-                          - generic [ref=e820]: •••
-                      - listitem [ref=e821] [cursor=pointer]:
-                        - generic [ref=e822]: "16"
-                      - listitem [ref=e823] [cursor=pointer]:
-                        - generic [ref=e824]: Next
-                      - listitem [ref=e825]:
-                        - generic "Page Size" [ref=e826] [cursor=pointer]:
-                          - generic [ref=e828]:
-                            - combobox "Page Size" [ref=e830]
-                            - generic "16 / page" [ref=e831]
-                          - generic:
-                            - img:
-                              - img
+              - generic [ref=e220]:
+                - text: ● ● ● ● ● ● ● ●
+                - tabpanel "Employee List" [ref=e221]:
+                  - generic [ref=e223]:
+                    - img "filter" [ref=e225] [cursor=pointer]:
+                      - img [ref=e226]
+                    - radiogroup "segmented control" [ref=e228]:
+                      - generic [ref=e229]:
+                        - generic [ref=e230] [cursor=pointer]:
+                          - radio
+                          - img [ref=e233]
+                        - generic [ref=e235] [cursor=pointer]:
+                          - radio [checked]
+                          - img [ref=e238]
+                    - generic [ref=e241] [cursor=pointer]:
+                      - generic [ref=e243]:
+                        - combobox [ref=e245]
+                        - generic "All Users" [ref=e246]
+                      - generic:
+                        - img
+                    - button "organization View Organization" [ref=e247] [cursor=pointer]:
+                      - img "organization" [ref=e248]
+                      - generic [ref=e249]: View Organization
+                    - button "Add Employee" [ref=e250] [cursor=pointer]:
+                      - generic [ref=e251]: Add Employee
+                  - generic [ref=e253]:
+                    - generic [ref=e256] [cursor=pointer]:
+                      - generic [ref=e257]:
+                        - generic [ref=e259]:
+                          - generic [ref=e260]: Absent
+                          - generic [ref=e261]:
+                            - img [ref=e262]
+                            - img [ref=e266]
+                            - img [ref=e269]
+                        - generic [ref=e275]: AU
+                      - generic [ref=e276]:
+                        - heading "A User - COL-0002" [level=5] [ref=e277]
+                        - generic "info@techsuperiors.com" [ref=e278]
+                        - generic [ref=e280]: Software Developer
+                        - generic "Phone number missing" [ref=e281]:
+                          - img [ref=e282]
+                        - generic [ref=e284]:
+                          - img [ref=e286]
+                          - generic [ref=e288]: Online
+                    - generic [ref=e291] [cursor=pointer]:
+                      - generic [ref=e292]:
+                        - generic [ref=e294]:
+                          - generic [ref=e295]: Absent
+                          - generic [ref=e296]:
+                            - img [ref=e297]
+                            - img [ref=e301]
+                            - img [ref=e304]
+                        - generic [ref=e310]: S
+                      - generic [ref=e311]:
+                        - heading "Sai - COL-0004" [level=5] [ref=e312]
+                        - generic "harshith.bonta@techsuperiors.com" [ref=e313]
+                        - generic [ref=e315]: "-"
+                        - generic "Phone number missing" [ref=e316]:
+                          - img [ref=e317]
+                        - generic [ref=e319]:
+                          - img [ref=e321]
+                          - generic [ref=e323]: Away
+                    - generic [ref=e326] [cursor=pointer]:
+                      - generic [ref=e327]:
+                        - generic [ref=e329]:
+                          - generic [ref=e330]: Absent
+                          - generic [ref=e331]:
+                            - img [ref=e332]
+                            - img [ref=e336]
+                            - img [ref=e339]
+                        - img [ref=e347]
+                      - generic [ref=e348]:
+                        - heading "Affan Rao - COL-0005" [level=5] [ref=e349]
+                        - generic "affan.rao@techsuperiors.com" [ref=e350]
+                        - generic [ref=e352]: Software Developer
+                        - generic "Phone number missing" [ref=e353]:
+                          - img [ref=e354]
+                        - generic [ref=e356]:
+                          - img [ref=e358]
+                          - generic [ref=e360]: Away
+                    - generic [ref=e363] [cursor=pointer]:
+                      - generic [ref=e364]:
+                        - generic [ref=e366]:
+                          - generic [ref=e367]: Absent
+                          - generic [ref=e368]:
+                            - img [ref=e369]
+                            - img [ref=e373]
+                            - img [ref=e376]
+                        - generic [ref=e382]: SQ
+                      - generic [ref=e383]:
+                        - heading "Sadiya Q Qamar - COL-0006" [level=5] [ref=e384]
+                        - generic "sadiya.qamar@techsuperiors.com" [ref=e385]
+                        - generic [ref=e387]: HR Business Partner
+                        - generic [ref=e388]: +91 9828377238
+                        - generic [ref=e389]:
+                          - img [ref=e391]
+                          - generic [ref=e393]: Online
+                    - generic [ref=e396] [cursor=pointer]:
+                      - generic [ref=e397]:
+                        - generic [ref=e399]:
+                          - generic [ref=e400]: Absent
+                          - generic [ref=e401]:
+                            - img [ref=e402]
+                            - img [ref=e406]
+                            - img [ref=e409]
+                        - generic [ref=e415]: R
+                      - generic [ref=e416]:
+                        - heading "Riya - COL-0007" [level=5] [ref=e417]
+                        - generic "riya@gmail.com" [ref=e418]
+                        - generic [ref=e420]: "-"
+                        - generic "Phone number missing" [ref=e421]:
+                          - img [ref=e422]
+                        - generic [ref=e424]:
+                          - img [ref=e426]
+                          - generic [ref=e428]: Offline
+                    - generic [ref=e431] [cursor=pointer]:
+                      - generic [ref=e432]:
+                        - generic [ref=e434]:
+                          - generic [ref=e435]: Absent
+                          - generic [ref=e436]:
+                            - img [ref=e437]
+                            - img [ref=e441]
+                            - img [ref=e444]
+                        - generic [ref=e450]: S
+                      - generic [ref=e451]:
+                        - heading "Samay - COL-0012" [level=5] [ref=e452]
+                        - generic "shrishti.semwal+dev1234@techsuperiors.com" [ref=e453]
+                        - generic [ref=e455]: IT Director
+                        - generic [ref=e456]: +91 9876543234
+                        - generic [ref=e457]:
+                          - img [ref=e459]
+                          - generic [ref=e461]: Offline
+                    - generic [ref=e464] [cursor=pointer]:
+                      - generic [ref=e465]:
+                        - generic [ref=e467]:
+                          - generic [ref=e468]: Absent
+                          - generic [ref=e469]:
+                            - img [ref=e470]
+                            - img [ref=e474]
+                            - img [ref=e477]
+                        - generic [ref=e483]: SS
+                      - generic [ref=e484]:
+                        - heading "Shrishti Sem - COL-0013" [level=5] [ref=e485]
+                        - generic "shrishti@collectivsuite.com" [ref=e486]
+                        - generic [ref=e488]: Software Developer
+                        - generic [ref=e489]: +91 9876534567
+                        - generic [ref=e490]:
+                          - img [ref=e492]
+                          - generic [ref=e494]: Offline
+                    - generic [ref=e497] [cursor=pointer]:
+                      - generic [ref=e498]:
+                        - generic [ref=e500]:
+                          - generic [ref=e501]: Absent
+                          - generic [ref=e502]:
+                            - img [ref=e503]
+                            - img [ref=e507]
+                            - img [ref=e510]
+                        - generic [ref=e516]: SD
+                      - generic [ref=e517]:
+                        - heading "Sophia Devis - COL-0020" [level=5] [ref=e518]
+                        - generic "sadiya.qamar+sophia@techsuperiors.com" [ref=e519]
+                        - generic [ref=e521]: "-"
+                        - generic [ref=e522]: +91 9898393982
+                        - generic [ref=e523]:
+                          - img [ref=e525]
+                          - generic [ref=e527]: Offline
+                    - generic [ref=e530] [cursor=pointer]:
+                      - generic [ref=e531]:
+                        - generic [ref=e533]:
+                          - generic [ref=e534]: Absent
+                          - generic [ref=e535]:
+                            - img [ref=e536]
+                            - img [ref=e540]
+                            - img [ref=e543]
+                        - generic [ref=e549]: R
+                      - generic [ref=e550]:
+                        - heading "Rupali - COL-0021" [level=5] [ref=e551]
+                        - generic "sadiya.qamar+rupali@techsuperiors.com" [ref=e552]
+                        - generic [ref=e554]: Human Resources Manager
+                        - generic [ref=e555]: +91 9883874834
+                        - generic [ref=e556]:
+                          - img [ref=e558]
+                          - generic [ref=e560]: Offline
+                    - generic [ref=e563] [cursor=pointer]:
+                      - generic [ref=e564]:
+                        - generic [ref=e566]:
+                          - generic [ref=e567]: Absent
+                          - generic [ref=e568]:
+                            - img [ref=e569]
+                            - img [ref=e573]
+                            - img [ref=e576]
+                        - generic [ref=e582]: AK
+                      - generic [ref=e583]:
+                        - heading "Ankit Kumar - COL-0023" [level=5] [ref=e584]
+                        - generic "ankit.kumar@techsuperiors.com" [ref=e585]
+                        - generic [ref=e587]: Software Developer
+                        - generic [ref=e588]: +91 2343242342
+                        - generic [ref=e589]:
+                          - img [ref=e591]
+                          - generic [ref=e593]: Online
+                    - generic [ref=e596] [cursor=pointer]:
+                      - generic [ref=e597]:
+                        - generic [ref=e599]:
+                          - generic [ref=e600]: Absent
+                          - generic [ref=e601]:
+                            - img [ref=e602]
+                            - img [ref=e606]
+                            - img [ref=e609]
+                        - generic [ref=e615]: AK
+                      - generic [ref=e616]:
+                        - heading "Ankit Kumar - COL-0024" [level=5] [ref=e617]
+                        - generic "ankit.kumar+ankit@techsuperiors.com" [ref=e618]
+                        - generic [ref=e620]: Chief Technology Officer
+                        - generic [ref=e621]: +91 2343242342
+                        - generic [ref=e622]:
+                          - img [ref=e624]
+                          - generic [ref=e626]: Online
+                    - generic [ref=e629] [cursor=pointer]:
+                      - generic [ref=e630]:
+                        - generic [ref=e632]:
+                          - generic [ref=e633]: Absent
+                          - generic [ref=e634]:
+                            - img [ref=e635]
+                            - img [ref=e639]
+                            - img [ref=e642]
+                        - generic [ref=e648]: KT
+                      - generic [ref=e649]:
+                        - heading "Kartikey Tripathi - COL-0025" [level=5] [ref=e650]
+                        - generic "kartkartikey.santosh@techsuperiors.com" [ref=e651]
+                        - generic [ref=e653]: Human Resources Director
+                        - generic [ref=e654]: +91 1232313121
+                        - generic [ref=e655]:
+                          - img [ref=e657]
+                          - generic [ref=e659]: Offline
+                    - generic [ref=e662] [cursor=pointer]:
+                      - generic [ref=e663]:
+                        - generic [ref=e665]:
+                          - generic [ref=e666]: Absent
+                          - generic [ref=e667]:
+                            - img [ref=e668]
+                            - img [ref=e672]
+                            - img [ref=e675]
+                        - generic [ref=e681]: NK
+                      - generic [ref=e682]:
+                        - heading "Nishant Kumar - COL-0008" [level=5] [ref=e683]
+                        - generic "nishant.kumar@techsuperiors.com" [ref=e684]
+                        - generic [ref=e686]: Human Resources Director
+                        - generic [ref=e687]: +91 9876598765
+                        - generic [ref=e688]:
+                          - img [ref=e690]
+                          - generic [ref=e692]: Offline
+                    - generic [ref=e695] [cursor=pointer]:
+                      - generic [ref=e696]:
+                        - generic [ref=e698]:
+                          - generic [ref=e699]: Absent
+                          - generic [ref=e700]:
+                            - img [ref=e701]
+                            - img [ref=e705]
+                            - img [ref=e708]
+                        - generic [ref=e714]: AK
+                      - generic [ref=e715]:
+                        - heading "Ajay Kumar - COL-0011" [level=5] [ref=e716]
+                        - generic "ajay.gupta@techsuperiors.com" [ref=e717]
+                        - generic [ref=e719]: Cybersecurity Analyst
+                        - generic "Phone number missing" [ref=e720]:
+                          - img [ref=e721]
+                        - generic [ref=e723]:
+                          - img [ref=e725]
+                          - generic [ref=e727]: Offline
+                    - generic [ref=e730] [cursor=pointer]:
+                      - generic [ref=e731]:
+                        - generic [ref=e733]:
+                          - generic [ref=e734]: Absent
+                          - generic [ref=e735]:
+                            - img [ref=e736]
+                            - img [ref=e740]
+                            - img [ref=e743]
+                        - img [ref=e751]
+                      - generic [ref=e752]:
+                        - heading "Priyanka Rautela - COL-0015" [level=5] [ref=e753]
+                        - generic "priyanka.rautela@techsuperiors.com" [ref=e754]
+                        - generic [ref=e756]: Chief Technology Officer
+                        - generic [ref=e757]: +91 9882387823
+                        - generic [ref=e758]:
+                          - img [ref=e760]
+                          - generic [ref=e762]: Offline
+                    - generic [ref=e765] [cursor=pointer]:
+                      - generic [ref=e766]:
+                        - generic [ref=e768]:
+                          - generic [ref=e769]: WFH
+                          - generic [ref=e770]:
+                            - img [ref=e771]
+                            - img [ref=e775]
+                            - img [ref=e778]
+                        - generic [ref=e784]: PC
+                      - generic [ref=e785]:
+                        - heading "Palak Chourasia - COL-0019" [level=5] [ref=e786]
+                        - generic "palak.chourasia@techsuperiors.com" [ref=e787]
+                        - generic [ref=e789]: Financial Controller
+                        - generic [ref=e790]: +91 8765456534
+                        - generic [ref=e791]:
+                          - img [ref=e793]
+                          - generic [ref=e795]: Away
+                    - generic [ref=e796]:
+                      - generic [ref=e798]:
+                        - text: Showing
+                        - strong [ref=e799]: 1–16
+                        - text: of
+                        - strong [ref=e800]: "250"
+                        - text: records
+                      - list [ref=e801]:
+                        - listitem [ref=e802]:
+                          - generic [ref=e803]: Previous
+                        - listitem [ref=e804] [cursor=pointer]:
+                          - generic [ref=e805]: "1"
+                        - listitem [ref=e806] [cursor=pointer]:
+                          - generic [ref=e807]: "2"
+                        - listitem [ref=e808] [cursor=pointer]:
+                          - generic [ref=e809]: "3"
+                        - listitem [ref=e810] [cursor=pointer]:
+                          - generic [ref=e811]: "4"
+                        - listitem [ref=e812] [cursor=pointer]:
+                          - generic [ref=e813]: "5"
+                        - listitem [ref=e814] [cursor=pointer]:
+                          - generic [ref=e816]:
+                            - img "double-right" [ref=e817]:
+                              - img [ref=e818]
+                            - generic [ref=e820]: •••
+                        - listitem [ref=e821] [cursor=pointer]:
+                          - generic [ref=e822]: "16"
+                        - listitem [ref=e823] [cursor=pointer]:
+                          - generic [ref=e824]: Next
+                        - listitem [ref=e825]:
+                          - generic "Page Size" [ref=e826] [cursor=pointer]:
+                            - generic [ref=e828]:
+                              - combobox "Page Size" [ref=e830]
+                              - generic "16 / page" [ref=e831]
+                            - generic:
+                              - img:
+                                - img
             - generic [ref=e833]:
               - generic [ref=e834]:
                 - generic [ref=e835]: S
@@ -639,9 +641,7 @@ Error: Submit failed: Submit failed — error toast: "User already registered wi
             - generic [ref=e1086]:
               - button "Cancel" [ref=e1087] [cursor=pointer]:
                 - generic [ref=e1088]: Cancel
-              - button "loading Confirm" [active] [ref=e1089] [cursor=pointer]:
-                - generic:
-                  - img "loading"
+              - button "Confirm" [active] [ref=e1089] [cursor=pointer]:
                 - generic [ref=e1090]: Confirm
 ```
 

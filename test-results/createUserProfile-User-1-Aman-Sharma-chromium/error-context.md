@@ -233,7 +233,7 @@ Error: Submit failed: Submit failed — error toast: "User already registered wi
                         - generic [ref=e388]: +91 9828377238
                         - generic [ref=e389]:
                           - img [ref=e391]
-                          - generic [ref=e393]: Away
+                          - generic [ref=e393]: Online
                     - generic [ref=e396] [cursor=pointer]:
                       - generic [ref=e397]:
                         - generic [ref=e399]:
@@ -445,7 +445,7 @@ Error: Submit failed: Submit failed — error toast: "User already registered wi
                         - text: Showing
                         - strong [ref=e799]: 1–16
                         - text: of
-                        - strong [ref=e800]: "248"
+                        - strong [ref=e800]: "250"
                         - text: records
                       - list [ref=e801]:
                         - listitem [ref=e802]:
@@ -627,9 +627,7 @@ Error: Submit failed: Submit failed — error toast: "User already registered wi
             - generic [ref=e1069]:
               - button "Cancel" [ref=e1070] [cursor=pointer]:
                 - generic [ref=e1071]: Cancel
-              - button "loading Confirm" [active] [ref=e1072] [cursor=pointer]:
-                - generic:
-                  - img "loading"
+              - button "Confirm" [active] [ref=e1072] [cursor=pointer]:
                 - generic [ref=e1073]: Confirm
 ```
 
