@@ -1,5 +1,3 @@
-// pages/steps/BaseStep.js
-
 class BaseStep {
   constructor(form, readModel, ctx) {
     this.form = form;
@@ -8,20 +6,144 @@ class BaseStep {
     this.fields = {};
   }
 
-  // ── Dropdown (single) ─────────────────────────────────────
+  async setCheckbox(fieldKey, value) {
+    if (value === undefined) return;
+    const { selector, group } = this.fields[fieldKey];
+    const checkbox = this.form.page.locator(selector);
+    const isChecked = await checkbox.isChecked();
+    if (Boolean(value) !== isChecked) await checkbox.click();
+    this.ctx.setInput(group, fieldKey, Boolean(value));
+    this.ctx.setFinal(fieldKey, Boolean(value));
+  }
+
+  async selectRadio(fieldKey, value) {
+    if (value === undefined || value === null) return;
+    const { group } = this.fields[fieldKey];
+    const option = value ? "Yes" : "No";
+    await this.form.page.getByRole("radio", { name: option }).click();
+    this.ctx.setInput(group, fieldKey, option);
+    this.ctx.setFinal(fieldKey, option);
+  }
+
+  async validateField(fieldKey) {
+    const expected = this.ctx.getFinal(fieldKey);
+    if (!expected) return;
+    const { selector } = this.fields[fieldKey];
+    const actual = await this.form.page.locator(selector).inputValue();
+    actual === expected
+      ? this.ctx.log(`[${fieldKey}] matched`, "info")
+      : this._recordMismatch(fieldKey, expected, actual);
+  }
+
+  async validateDropdown(fieldKey) {
+    const expected = this.ctx.getFinal(fieldKey);
+    if (!expected) return;
+    const { selector } = this.fields[fieldKey];
+    const actual = (
+      await this.form.page
+        .locator(selector)
+        .locator('xpath=ancestor::div[contains(@class,"ant-select")]')
+        .locator(".ant-select-selection-item")
+        .innerText()
+    ).trim();
+    actual === expected
+      ? this.ctx.log(`[${fieldKey}] matched`, "info")
+      : this._recordMismatch(fieldKey, expected, actual);
+  }
+
+  async validateMulti(fieldKey) {
+    const expected = this.ctx.getFinal(fieldKey);
+    if (!expected?.length) return;
+    const { selector } = this.fields[fieldKey];
+    const tags = this.form.page.locator(
+      `${selector} >> xpath=ancestor::div[contains(@class,"ant-select")] >> .ant-select-selection-item`,
+    );
+    const actual = (await tags.allTextContents()).map((t) => t.trim());
+    for (const val of expected) {
+      actual.map((t) => t.toLowerCase()).includes(val.toLowerCase())
+        ? this.ctx.log(`[${fieldKey}] "${val}" present`, "info")
+        : this._recordMismatch(`${fieldKey}:${val}`, val, "not found");
+    }
+  }
+
+  async validateCheckbox(fieldKey) {
+    const expected = this.ctx.getFinal(fieldKey);
+    if (expected === undefined || expected === null) return;
+    const { selector } = this.fields[fieldKey];
+    const actual = await this.form.page.locator(selector).isChecked();
+    actual === Boolean(expected)
+      ? this.ctx.log(`[${fieldKey}] matched (${actual})`, "info")
+      : this._recordMismatch(fieldKey, Boolean(expected), actual);
+  }
+
+  async validateRadio(fieldKey) {
+    const expected = this.ctx.getFinal(fieldKey);
+    if (!expected) return;
+
+    const isChecked = await this.form.page
+      .getByRole("radio", { name: expected })
+      .isChecked();
+
+    isChecked
+      ? this.ctx.log(`[${fieldKey}] "${expected}" selected`, "info")
+      : this._recordMismatch(fieldKey, expected, "not selected");
+  }
+
+  _recordMismatch(field, expected, actual) {
+    this.ctx.addMismatch({
+      field,
+      expected,
+      actual,
+      source: this.constructor.name, // ← auto-tags which step class
+    });
+    this.ctx.log(
+      `[${field}] expected="${expected}" actual="${actual}"`,
+      "warn",
+    );
+  }
+
+  _recordMatch(field) {
+    this.ctx.log(` ${field} matched`, "info");
+  }
+
+  async _waitForDropdownOptions(fieldKey, selector, page) {
+    const dropdowns = page.locator(".ant-select-dropdown");
+
+    try {
+      await dropdowns.first().waitFor({ state: "attached", timeout: 15000 });
+    } catch (e) {
+      throw new Error(
+        `[${fieldKey}] Dropdown never attached after clicking "${selector}". ` +
+          `Is the trigger selector correct? Inner: ${e.message}`,
+      );
+    }
+
+    const options = dropdowns.last().locator(".ant-select-item-option");
+
+    try {
+      await options.first().waitFor({ state: "visible", timeout: 15000 });
+    } catch (e) {
+      throw new Error(
+        `[${fieldKey}] Options never became visible (selector: "${selector}"). ` +
+          `Dropdown attached but empty — wrong trigger or still loading? Inner: ${e.message}`,
+      );
+    }
+
+    return options;
+  }
+
   async selectAntDropdown(fieldKey, value, label = fieldKey) {
     if (!value) return;
-
     const { selector, group } = this.fields[fieldKey];
     const page = this.form.page;
 
     await page.locator(selector).click({ force: true });
-
-    const dropdowns = page.locator(".ant-select-dropdown");
-    await dropdowns.first().waitFor({ state: "attached" });
-
-    const options = dropdowns.last().locator(".ant-select-item-option");
-    await options.first().waitFor({ state: "visible" });
+    await page.waitForTimeout(1000);
+    const options = await this._waitForDropdownOptions(
+      fieldKey,
+      selector,
+      page,
+    );
 
     const allTexts = [];
     const count = await options.count();
@@ -29,8 +151,9 @@ class BaseStep {
       allTexts.push((await options.nth(i).innerText()).trim());
     }
 
+    console.log(`[${fieldKey}] available options:`, allTexts);
     const index = allTexts.findIndex(
-      (t) => t.toLowerCase() === String(value).toLowerCase()
+      (t) => t.toLowerCase() === String(value).toLowerCase(),
     );
 
     let effectiveValue;
@@ -39,10 +162,13 @@ class BaseStep {
       await options.nth(index).click();
       effectiveValue = allTexts[index];
     } else {
-      await options.first().waitFor({ state: "visible", timeout: 5000 });
+      // redundant waitFor removed — helper already confirmed visibility
       await options.first().click();
       effectiveValue = allTexts[0];
-      this.ctx.log(`[${label}] no match for "${value}", used "${effectiveValue}"`, "warn");
+      this.ctx.log(
+        `[${label}] no match for "${value}", used "${effectiveValue}"`,
+        "warn",
+      );
       this.ctx.addMismatch({
         field: fieldKey,
         expected: value,
@@ -57,7 +183,6 @@ class BaseStep {
     this.ctx.setFinal(fieldKey, effectiveValue);
   }
 
-  // ── Dropdown (multi) ──────────────────────────────────────
   async selectAntDropdownMulti(fieldKey, values = [], label = fieldKey) {
     if (!values?.length) return;
 
@@ -66,11 +191,11 @@ class BaseStep {
 
     await page.locator(selector).click({ force: true });
 
-    const dropdowns = page.locator(".ant-select-dropdown");
-    await dropdowns.first().waitFor({ state: "attached" });
-
-    const options = dropdowns.last().locator(".ant-select-item-option");
-    await options.first().waitFor({ state: "visible" });
+    const options = await this._waitForDropdownOptions(
+      fieldKey,
+      selector,
+      page,
+    );
 
     const allTexts = [];
     const count = await options.count();
@@ -83,7 +208,7 @@ class BaseStep {
 
     for (const val of values) {
       const index = allTexts.findIndex(
-        (t) => t.toLowerCase() === String(val).toLowerCase()
+        (t) => t.toLowerCase() === String(val).toLowerCase(),
       );
 
       if (index === -1) {
@@ -114,127 +239,26 @@ class BaseStep {
       this.ctx.setFinal(fieldKey, selected);
     }
   }
-
-  // ── Checkbox ──────────────────────────────────────────────
-  async setCheckbox(fieldKey, value) {
-    if (value === undefined) return;
-
-    const { selector, group } = this.fields[fieldKey];
-    const checkbox = this.form.page.locator(selector);
-
-    const isChecked = await checkbox.isChecked();
-    if (Boolean(value) !== isChecked) await checkbox.click();
-
-    this.ctx.setInput(group, fieldKey, Boolean(value));
-    this.ctx.setFinal(fieldKey, Boolean(value));
-  }
-
-  // ── Radio ─────────────────────────────────────────────────
-  async selectRadio(fieldKey, value) {
-    if (value === undefined || value === null) return;
-
-    const { group } = this.fields[fieldKey];
-    const option = value ? "Yes" : "No";
-
-    await this.form.page.getByRole("radio", { name: option }).click();
-
-    this.ctx.setInput(group, fieldKey, option);
-    this.ctx.setFinal(fieldKey, option);
-  }
-
-  // ── Validate: text input ──────────────────────────────────
-  async validateField(fieldKey) {
-    const expected = this.ctx.getFinal(fieldKey);
-    if (!expected) return;
-
-    const { selector } = this.fields[fieldKey];
-    const actual = await this.form.page.locator(selector).inputValue();
-
-    actual === expected
-      ? this.ctx.log(`[${fieldKey}] matched`, "info")
-      : this._recordMismatch(fieldKey, expected, actual);
-  }
-
-  // ── Validate: single dropdown ─────────────────────────────
-  async validateDropdown(fieldKey) {
-    const expected = this.ctx.getFinal(fieldKey);
-    if (!expected) return;
-
-    const { selector } = this.fields[fieldKey];
-    const actual = (
-      await this.form.page
-        .locator(selector)
-        .locator('xpath=ancestor::div[contains(@class,"ant-select")]')
-        .locator(".ant-select-selection-item")
-        .innerText()
-    ).trim();
-
-    actual === expected
-      ? this.ctx.log(`[${fieldKey}] matched`, "info")
-      : this._recordMismatch(fieldKey, expected, actual);
-  }
-
-  // ── Validate: multi dropdown ──────────────────────────────
-  async validateMulti(fieldKey) {
-    const expected = this.ctx.getFinal(fieldKey);
-    if (!expected?.length) return;
-
-    const { selector } = this.fields[fieldKey];
-    const tags = this.form.page.locator(
-      `${selector} >> xpath=ancestor::div[contains(@class,"ant-select")] >> .ant-select-selection-item`
+  async checkForValidationErrors() {
+    const errorElements = this.form.page.locator(
+      ".ant-form-item-explain-error",
     );
-    const actual = (await tags.allTextContents()).map((t) => t.trim());
+    const errorCount = await errorElements.count();
 
-    for (const val of expected) {
-      actual.map((t) => t.toLowerCase()).includes(val.toLowerCase())
-        ? this.ctx.log(`[${fieldKey}] "${val}" present`, "info")
-        : this._recordMismatch(`${fieldKey}:${val}`, val, "not found");
+    if (errorCount === 0) return;
+
+    const errorMessages = [];
+
+    for (let i = 0; i < errorCount; i++) {
+      const text = (await errorElements.nth(i).innerText()).trim();
+      if (text) errorMessages.push(text);
     }
-  }
 
-  // ── Validate: checkbox ────────────────────────────────────
-  async validateCheckbox(fieldKey) {
-    const expected = this.ctx.getFinal(fieldKey);
-    if (expected === undefined || expected === null) return;
-
-    const { selector } = this.fields[fieldKey];
-    const actual = await this.form.page.locator(selector).isChecked();
-
-    actual === Boolean(expected)
-      ? this.ctx.log(`[${fieldKey}] matched (${actual})`, "info")
-      : this._recordMismatch(fieldKey, Boolean(expected), actual);
-  }
-
-  // ── Validate: radio ───────────────────────────────────────
-  async validateRadio(fieldKey) {
-    const expected = this.ctx.getFinal(fieldKey);
-    if (!expected) return;
-
-    const isChecked = await this.form.page
-      .getByRole("radio", { name: expected })
-      .isChecked();
-
-    isChecked
-      ? this.ctx.log(`[${fieldKey}] "${expected}" selected`, "info")
-      : this._recordMismatch(fieldKey, expected, "not selected");
-  }
-
-  // ── Shared mismatch recorder ──────────────────────────────
-  _recordMismatch(field, expected, actual) {
-    this.ctx.addMismatch({
-      field,
-      expected,
-      actual,
-      source: this.constructor.name,  // ← auto-tags which step class
-    });
-    this.ctx.log(
-      `[${field}] expected="${expected}" actual="${actual}"`,
-      "warn"
+    throw new Error(
+      `UI validation error(s) detected — flow stopped:\n${errorMessages
+        .map((msg, i) => `  ${i + 1}. ${msg}`)
+        .join("\n")}`,
     );
-  }
-  
-   _recordMatch(field) {
-    this.ctx.log(` ${field} matched`, "info");
   }
 }
 

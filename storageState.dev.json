@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "accessToken",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzgwOTMwNDIsInVzZXJfdHlwZSI6IlVzZXIiLCJ1c2VyX2lkIjoxOTYsImNsaWVudF9pZCI6MSwiY2xpZW50X25hbWUiOiJDb2xsZWN0aXZXb3JrIiwiaXNTdWJzY3JpcHRpb25BY3RpdmUiOnRydWUsImlhdCI6MTc3NzQ4ODI0Mn0.vh68jSeW1y1klJw7NCYFaE9qgSssP3yYMR9GkYcFEtc"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Nzg0MzE1ODUsInVzZXJfdHlwZSI6IlVzZXIiLCJ1c2VyX2lkIjoxOTYsImNsaWVudF9pZCI6MSwiY2xpZW50X25hbWUiOiJDb2xsZWN0aXZXb3JrIiwiaXNTdWJzY3JpcHRpb25BY3RpdmUiOnRydWUsImlhdCI6MTc3NzgyNjc4NX0.IWI7EWlqIzDwpcYSEs62RguZ5cGCNlOKvX7itT5Iuv8"
         },
         {
           "name": "refreshToken",
-          "value": "U2FsdGVkX1+e0DD/grxPQI3fFlOJP5afF+HCgiGxvryFAS81W1eZpqGlf0egD8CTAZQFNs1g0AQJX6fKjaucf770D4Qv720cxLKU9jqTW68="
+          "value": "U2FsdGVkX18qbThV++D9Q5zIg9nFOtvGt4ZPUSnVM6/AV1j5A8W6jnC/5n5lZAUCfNauDx2XX0qaHtqgxybVXco4mwuyBDAkrHhaBW2OSZs="
         },
         {
           "name": "appId",

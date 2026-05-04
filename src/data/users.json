@@ -1,74 +1,161 @@
 [
-{
-  "personalDetails": {
-    "id": "user_04",
-    "firstName": "Sanjay",
-    "middleName": "",
-    "lastName": "",
-    "dateOfBirth": "",
-    "gender": "",
-    "maritalStatus": "",
-    "phone": "",
-    "employeeSeries": "",
-    "joiningDate": "",
-    "skills": ["Python"]
-  },
-  "workDetails": {
-    "workEmail": "sanjay.bhandari+pwtesting3@techsuperiors.com",
-    "location": "",
-    "role": "Fake Role",
-    "employmentStatus": "Contract",
-    "employmentType": "Part Time",
-    "workMode": "Remote",
-    "businessUnit": "",
-    "holidayPlan": "",
-    "department": "HR",
-    "designation": "",
-    "grade": "G0",
-    "band": "B0",
-    "reportingManager": "Unknown",
-    "hrManager": "Unknown",
-    "l2Manager": "Unknown",
-    "associateManager": [],
-    "protectDocumentRestrictedAccess": false
-  },
-  "policySetting": {
-    "isProbationDurationApplicable": false,
-    "onboardingPolicy": "",
-    "shiftPolicy": "",
-    "attendancePolicy": "",
-    "leavePolicy": "",
-    "reimbursementPolicy": "",
-    "offboardingPolicy": "",
-    "overtimePolicy": ""
-  },
-  "uploadDocument": {
-    "employeeAgreements": [],
-    "miscellaneous": [],
-    "education": [],
-    "previousEmployment": [],
-    "onboarding": [],
-    "incomeTax": [],
-    "identity": [],
-    "medical": [],
-    "payroll": [],
-    "exit": [],
-    "employeeLetters": [],
-    "assets": [],
-    "salaryAppraisals": [],
-    "signatures": []
-  },
-  "financeDetails": {
-    "legalEntity": "INVALID",
-    "payGroup": "INVALID",
-    "ctc": "15000",
-    "bonuses": [],
-    "payrollDetails": {
-      "providentFundEligible": false,
-      "esiEligible": false,
-      "lwfEligible": false
+  {
+    "personalDetails": {
+      "firstName": "Rahul",
+      "middleName": "Kumar",
+      "lastName": "Verma",
+      "dateOfBirth": "1995-07-22",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "phone": "8765432109",
+      "employeeSeries": "Tech Superior (TS-EMP001)",
+      "joiningDate": "2024-11-01",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "MySQL"
+      ]
     },
-    "taxRegime": ""
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest003@techsuperiors.com",
+      "location": "Gurgaon",
+      "role": "Finance Role",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "Remote",
+      "businessUnit": "tech hybrid unit",
+      "holidayPlan": "restricted holiday plan(ggn)",
+      "department": "Finance/Accounts Department",
+      "designation": "Chief Financial Officer (CFO)",
+      "grade": "G1",
+      "band": "entry",
+      "reportingManager": "Ankit Kapoor (COL-4611)",
+      "hrManager": "Sonal B (COL-0068)",
+      "l2Manager": "Suraj Patel (COL-0137)",
+      "associateManager": [
+        "Nirmal Singh (COL-0225)",
+        "Sankalp (COL-0057)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": true,
+      "onboardingPolicy": "TS Intern Onboarding Policy-01",
+      "shiftPolicy": "TS Shift Policy-01",
+      "attendancePolicy": "Gurugram Attendance Policy -01",
+      "leavePolicy": "TS Leave Policy 02",
+      "reimbursementPolicy": "Reimbursement Policy",
+      "offboardingPolicy": "TS Offboarding Policy-01",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Legal Entity-14",
+      "payGroup": "Neologic Pay logic 1",
+      "ctc": "15000",
+      "bonuses": [
+        {
+          "bonusName": "Approval Based Performance Bonus (Fixed)",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "10000",
+          "payoutMonth": "2026-12",
+          "note": "Year-end fixed bonus"
+        },
+        {
+          "bonusName": "Quarterly bonus Pay",
+          "bonusType": "Percentage",
+          "percentage": "5",
+          "value": "5000",
+          "payoutMonth": "2026-09",
+          "note": "Q3 quarterly bonus"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": false,
+        "lwfEligible": true
+      },
+      "taxRegime": "Old Regime"
+    }
   }
-}
 ]

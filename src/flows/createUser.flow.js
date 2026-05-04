@@ -11,10 +11,9 @@ const { FormReadModel } = require("../utils/FormReadModel");
 const { expect } = require("@playwright/test");
 
 async function createUserFlow(page, user, test) {
-  console.log("CTX CHECK:", typeof TestContext, typeof user.id);
   const userId = user.id ?? user.personalDetails?.firstName ?? "unknown";
-  const ctx = new TestContext(user.id);
-  console.log("CTX CREATED:", typeof ctx.log);
+  const ctx = new TestContext(userId);
+  console.log("CTX CREATED for:", userId);
 
   const createPage = new CreateUserPage(page);
   const form = new FormEngine(page, ctx);
@@ -45,6 +44,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[personal] fill failed: ${err.message}`, "error");
         err.message = `Step 1 fill failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -54,6 +54,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[personal] captureEmployeeId failed: ${err.message}`, "error");
         err.message = `captureEmployeeId failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -63,6 +64,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[personal] validate failed: ${err.message}`, "error");
         err.message = `Step 1 validate failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -71,6 +73,7 @@ async function createUserFlow(page, user, test) {
         await errorCapture.assertNoErrors(expect, "Step1");
       } catch (err) {
         ctx.log(`[personal] UI errors: ${err.message}`, "error");
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -84,13 +87,14 @@ async function createUserFlow(page, user, test) {
     throw err;
   }
 
-  // ── Step 2: Work Details ─────────────────────────────────────
+  // ── Step 2: Work Details 
   await test.step("Step 2: Work Details", async () => {
     await test.step("[work] assert drawer open", async () => {
       try {
         await createPage.expectDrawerOpen();
       } catch (err) {
         ctx.log(`[work] drawer not open: ${err.message}`, "error");
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -101,6 +105,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[work] fill failed: ${err.message}`, "error");
         err.message = `Step 2 fill failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -111,6 +116,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[work] validate failed: ${err.message}`, "error");
         err.message = `Step 2 validate failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -120,6 +126,7 @@ async function createUserFlow(page, user, test) {
         await errorCapture.assertNoErrors(expect, "Step2");
       } catch (err) {
         ctx.log(`[work] UI errors: ${err.message}`, "error");
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -134,7 +141,7 @@ async function createUserFlow(page, user, test) {
     throw err;
   }
 
-  // ── Step 3: Policy Setting ───────────────────────────────────
+  // ── Step 3: Policy Setting 
   await test.step("Step 3: Policy Setting", async () => {
     await test.step("[policy] fill", async () => {
       try {
@@ -152,6 +159,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[policy] validate failed: ${err.message}`, "error");
         err.message = `Step 3 validate failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -175,7 +183,7 @@ async function createUserFlow(page, user, test) {
     throw err;
   }
 
-  // ── Step 4: Upload Documents ─────────────────────────────────
+  // ── Step 4: Upload Documents 
   await test.step("Step 4: Upload Documents", async () => {
     await test.step("[upload] fill", async () => {
       try {
@@ -183,6 +191,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[upload] fill failed: ${err.message}`, "error");
         err.message = `Step 4 fill failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -193,6 +202,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[upload] validate failed: ${err.message}`, "error");
         err.message = `Step 4 validate failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -216,8 +226,9 @@ async function createUserFlow(page, user, test) {
     throw err;
   }
 
-  // ── Step 5: Finance Details ──────────────────────────────────
+  // ── Step 5: Finance Details 
   await test.step("Step 5: Finance Details", async () => {
+    
     await test.step("[finance] fill", async () => {
       try {
         await step5.fill(user.financeDetails);
@@ -234,6 +245,7 @@ async function createUserFlow(page, user, test) {
       } catch (err) {
         ctx.log(`[finance] validate failed: ${err.message}`, "error");
         err.message = `Step 5 validate failed: ${err.message}`;
+        err.ctx = ctx;
         throw err;
       }
     });
@@ -243,12 +255,13 @@ async function createUserFlow(page, user, test) {
         await errorCapture.assertNoErrors(expect, "Step5");
       } catch (err) {
         ctx.log(`[finance] UI errors: ${err.message}`, "error");
+        err.ctx = ctx;
         throw err;
       }
     });
   });
 
-  // ── Submit ───────────────────────────────────────────────────
+  // ── Submit 
   await test.step("Submit: create employee", async () => {
     try {
       await createPage.createEmployee();
@@ -261,6 +274,7 @@ async function createUserFlow(page, user, test) {
     } catch (err) {
       ctx.log(`Submit failed: ${err.message}`, "error");
       err.message = `Submit failed: ${err.message}`;
+      err.ctx = ctx;
       throw err;
     }
   });

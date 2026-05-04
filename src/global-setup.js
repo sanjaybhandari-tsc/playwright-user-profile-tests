@@ -1,15 +1,15 @@
-require("dotenv").config({
-  path: `.env.${process.env.TEST_ENV || "dev"}`,
-});
 const fs = require('fs');
 const { chromium } = require('@playwright/test');
 const dotenv = require('dotenv');
+const config = require('./config');
+require("dotenv").config({
+  path: `.env.${process.env.TEST_ENV || "dev"}`,
+});
 
 async function globalSetup() {
   const env = process.env.TEST_ENV || 'dev';
   // Load env FIRST
   dotenv.config({ path: `.env.${env}` });
-  const config = require('./config');
   const storagePath = `storageState.${env}.json`;
   //Skip login
   if (fs.existsSync(storagePath)) {

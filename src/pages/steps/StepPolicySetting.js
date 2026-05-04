@@ -1,8 +1,8 @@
 const { expect } = require("@playwright/test");
 const { BaseStep } = require("./BaseStep");
 const { fallbackRegistry } = require("../../data/fallbackRegistry");
-class StepPolicySetting extends BaseStep{
- constructor(form, readModel, ctx) {
+class StepPolicySetting extends BaseStep {
+  constructor(form, readModel, ctx) {
     super(form, readModel, ctx);
 
     this.fields = {
@@ -47,45 +47,40 @@ class StepPolicySetting extends BaseStep{
     this.form.registerFields(this.fields);
   }
 
-    async fill(rawData) {
-    const data = { ...fallbackRegistry.policySetting, };
-    for (const [key, val] of Object.entries(rawData || {})) {
+  async fill(rawData) {
+      console.log("RAW KEYS:", Object.keys(rawData || {}));
+  console.log("RAW VALUES:", JSON.stringify(rawData, null, 2));
+  
+  const data = { ...fallbackRegistry.policySetting };
+  console.log("AFTER FALLBACK:", JSON.stringify(data, null, 2));
+  
+  for (const [key, val] of Object.entries(rawData || {})) {
+    console.log(`  merging key="${key}" val="${val}"`);
     if (val !== null && val !== undefined && val !== "") {
       data[key] = val;
     }
   }
-  console.log("data",data);
+  console.log("FINAL MERGED:", JSON.stringify(data, null, 2));
+    console.log("data", data);
     // if (data.workEmail) {await this.form.fill(this.selectors.workEmail, data.workEmail)}
-    // if (typeof data.isProbationDurationApplicable === "boolean") {
-    //   await this.selectRadio(
-    //     "isProbationDurationApplicable",
-    //     data.isProbationDurationApplicable,
-    //   );
-    // }
+    if (typeof data.isProbationDurationApplicable === "boolean") {
+      await this.selectRadio(
+        "isProbationDurationApplicable",
+        data.isProbationDurationApplicable,
+      );
+    }
 
     if (data.onboardingPolicy) {
-      await this.selectAntDropdown(
-        "onboardingPolicy",
-        data.onboardingPolicy,
-      );
+      await this.selectAntDropdown("onboardingPolicy", data.onboardingPolicy);
     }
     if (data.shiftPolicy) {
-      await this.selectAntDropdown(
-        "shiftPolicy",
-        data.shiftPolicy,
-      );
+      await this.selectAntDropdown("shiftPolicy", data.shiftPolicy);
     }
     if (data.attendancePolicy) {
-      await this.selectAntDropdown(
-        "attendancePolicy",
-        data.attendancePolicy,
-      );
+      await this.selectAntDropdown("attendancePolicy", data.attendancePolicy);
     }
     if (data.leavePolicy) {
-      await this.selectAntDropdown(
-        "leavePolicy",
-        data.leavePolicy,
-      );
+      await this.selectAntDropdown("leavePolicy", data.leavePolicy);
     }
     if (data.reimbursementPolicy) {
       await this.selectAntDropdown(
@@ -94,16 +89,10 @@ class StepPolicySetting extends BaseStep{
       );
     }
     if (data.offboardingPolicy) {
-      await this.selectAntDropdown(
-        "offboardingPolicy",
-        data.offboardingPolicy,
-      );
+      await this.selectAntDropdown("offboardingPolicy", data.offboardingPolicy);
     }
     if (data.overtimePolicy) {
-      await this.selectAntDropdown(
-        "overtimePolicy",
-        data.overtimePolicy,
-      );
+      await this.selectAntDropdown("overtimePolicy", data.overtimePolicy);
     }
 
     // if (data.protectDocumentRestrictedAccess !== undefined) {
@@ -112,35 +101,51 @@ class StepPolicySetting extends BaseStep{
     // await this.form.pause(7000);
   }
 
-  async validate() {  //no data arg needed — ctx has everything
-  const safeRun = async (fn, label) => {
-  try { await fn(); }
-  catch (err) {
-    this.ctx.log(`[${label}] ${err.message}`, "error");
-    this.ctx.addMismatch({
-      field: label,
-      expected: "no error",
-      actual: err.message,
-      source: this.constructor.name,
-    });
-    throw err;  // ← re-throw
+  async validate() {
+    //no data arg needed — ctx has everything
+    const safeRun = async (fn, label) => {
+      try {
+        await fn();
+      } catch (err) {
+        this.ctx.log(`[${label}] ${err.message}`, "error");
+        this.ctx.addMismatch({
+          field: label,
+          expected: "no error",
+          actual: err.message,
+          source: this.constructor.name,
+        });
+        throw err; // ← re-throw
+      }
+    };
+
+    await safeRun(() => this.validateRadio("isProbationDurationApplicable"), "isProbationDurationApplicable");
+
+    await safeRun(
+      () => this.validateDropdown("onboardingPolicy"),
+      "onboardingPolicy",
+    );
+    await safeRun(() => this.validateDropdown("shiftPolicy"), "shiftPolicy");
+    await safeRun(
+      () => this.validateDropdown("attendancePolicy"),
+      "attendancePolicy",
+    );
+    await safeRun(() => this.validateDropdown("leavePolicy"), "leavePolicy");
+    await safeRun(
+      () => this.validateDropdown("reimbursementPolicy"),
+      "reimbursementPolicy",
+    );
+    await safeRun(
+      () => this.validateDropdown("offboardingPolicy"),
+      "offboardingPolicy",
+    );
+    await safeRun(
+      () => this.validateDropdown("overtimePolicy"),
+      "overtimePolicy",
+    );
+
+    // await safeRun(() => this.validateField("workEmail"), "workEmail");
+    // await safeRun(() => this.validateMulti("associateManager"), "associateManager");
   }
-};
-
-   // await safeRun(() => this.validateRadio("isProbationDurationApplicable"), "isProbationDurationApplicable");
-
-await safeRun(() => this.validateDropdown("onboardingPolicy"), "onboardingPolicy");
-await safeRun(() => this.validateDropdown("shiftPolicy"), "shiftPolicy");
-await safeRun(() => this.validateDropdown("attendancePolicy"), "attendancePolicy");
-await safeRun(() => this.validateDropdown("leavePolicy"), "leavePolicy");
-await safeRun(() => this.validateDropdown("reimbursementPolicy"), "reimbursementPolicy");
-await safeRun(() => this.validateDropdown("offboardingPolicy"), "offboardingPolicy");
-await safeRun(() => this.validateDropdown("overtimePolicy"), "overtimePolicy");
-
-// await safeRun(() => this.validateField("workEmail"), "workEmail");
-// await safeRun(() => this.validateMulti("associateManager"), "associateManager");
-}
-
 }
 
 module.exports = { StepPolicySetting };

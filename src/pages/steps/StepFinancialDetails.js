@@ -68,12 +68,14 @@ class StepFinancialDetails extends BaseStep {
   }
 
   async fill(rawData) {
+    console.log("FINANCE RAW:", JSON.stringify(rawData, null, 2));
     const data = { ...fallbackRegistry.financeDetails };
     for (const [key, val] of Object.entries(rawData || {})) {
       if (val !== null && val !== undefined && val !== "") {
         data[key] = val;
       }
     }
+    console.log("FINANCE MERGED:", JSON.stringify(data, null, 2));
     console.log("data", data);
     // if (!data) return;
 
@@ -152,9 +154,11 @@ class StepFinancialDetails extends BaseStep {
         if (winner === "value") {
           this.ctx.log(`bonus_${i}: value field detected`, "info");
           await this.form.fill(`bonus_${i}_value`, bonusData.value);
+          bonusData.bonusType = "value"; // ← tag it
         } else {
           this.ctx.log(`bonus_${i}: percentage field detected`, "info");
           await this.form.fill(`bonus_${i}_percentage`, bonusData.percentage);
+          bonusData.bonusType = "percentage"; // ← tag it
         }
 
         // 5. payout month + note
@@ -172,19 +176,84 @@ class StepFinancialDetails extends BaseStep {
         this.ctx.log(`bonus_${i}: saved`, "info");
       }
       this.ctx.setFinal("bonusCount", data.bonuses.length);
-  this.ctx.setFinal("bonuses", data.bonuses);
+      this.ctx.setFinal("bonuses", data.bonuses);
     }
   }
+
+  async selectAntDropdown(fieldKey, value, label = fieldKey) {
+  if (!value) return;
+
+  const { selector, group } = this.fields[fieldKey];
+  const page = this.form.page;
+
+  // Open the dropdown
+  await page.locator(selector).click({ force: true });
+
+  // Wait for ANY visible dropdown (use first, not strict)
+  const dropdown = page.locator('.ant-select-dropdown:not(.ant-select-dropdown-hidden)').last();
+  await dropdown.waitFor({ state: 'visible', timeout: 5000 });
+
+  // Type into the search input using the selector's ID
+  // e.g. "#employeeForm_legal_entity" → search input inside it
+  const searchInput = page.locator(`${selector}-search-input, input[id="${selector.replace('#', '')}"]`);
+  
+  // Fallback — type via keyboard since input may be opacity:0
+  await page.keyboard.type(String(value), { delay: 50 });
+
+  // Wait for filtered results
+  await page.waitForTimeout(500);
+
+  // Scroll down inside dropdown to load all filtered options
+  await dropdown.evaluate(el => el.scrollTop += 300);
+  await page.waitForTimeout(300);
+
+  const options = dropdown.locator('.ant-select-item-option');
+  await options.first().waitFor({ state: 'visible', timeout: 5000 });
+
+  const allTexts = [];
+  const count = await options.count();
+  for (let i = 0; i < count; i++) {
+    allTexts.push((await options.nth(i).innerText()).trim());
+  }
+
+  console.log(`[${fieldKey}] filtered options for "${value}":`, allTexts);
+
+  const matchIndex = allTexts.findIndex(
+    (t) => t.toLowerCase() === String(value).toLowerCase(),
+  );
+
+  let effectiveValue;
+
+  if (matchIndex !== -1) {
+    await options.nth(matchIndex).click();
+    effectiveValue = allTexts[matchIndex];
+  } else {
+    await options.first().click();
+    effectiveValue = allTexts[0];
+    this.ctx.log(`[${label}] no match for "${value}", used "${effectiveValue}"`, "warn");
+    this.ctx.addMismatch({
+      field: fieldKey,
+      expected: value,
+      actual: effectiveValue,
+      source: label,
+    });
+  }
+
+  if (group !== "system") {
+    this.ctx.setInput(group, fieldKey, effectiveValue);
+  }
+  this.ctx.setFinal(fieldKey, effectiveValue);
+}
 
   async fillMonth(fieldKey, value) {
     if (!value) return;
 
-    const { selector, group } = this.fields[fieldKey]; //  resolve
-    const page = this.form.page; //  single source, remove this.form?.page || this.page
+    const { selector, group } = this.fields[fieldKey]; //
+    const page = this.form.page; //
     const input = page.locator(selector);
 
     await input.click();
-    await input.fill(String(value)); //  use value not date (date is undefined)
+    await input.fill(String(value)); //
     await input.blur();
 
     this.ctx.setInput(group, fieldKey, value);
@@ -215,20 +284,23 @@ class StepFinancialDetails extends BaseStep {
     await safeRun(() => this.validateDropdown("taxRegime"), "taxRegime");
 
     // ── Payroll checkboxes ────────────────────────────────────
-    await safeRun(() => this.validateCheckbox("providentFundEligible"), "providentFundEligible");
+    await safeRun(
+      () => this.validateCheckbox("providentFundEligible"),
+      "providentFundEligible",
+    );
     await safeRun(() => this.validateCheckbox("esiEligible"), "esiEligible");
     await safeRun(() => this.validateCheckbox("lwfEligible"), "lwfEligible");
 
     // ── Bonuses (dynamic) ─────────────────────────────────────
     const bonusCount = this.ctx.getFinal("bonusCount") || 0;
-  const rawBonuses = this.ctx.getFinal("bonuses") || [];
+    const rawBonuses = this.ctx.getFinal("bonuses") || [];
 
-  for (let i = 0; i < bonusCount; i++) {
-    await safeRun(
-      () => this.validateBonusCard(i, rawBonuses[i]),
-      `bonus_${i}`
-    );
-  }
+    for (let i = 0; i < bonusCount; i++) {
+      await safeRun(
+        () => this.validateBonusCard(i, rawBonuses[i]),
+        `bonus_${i}`,
+      );
+    }
     // // ── Static fields ─────────────────────────────────────────
     // await safeRun(() => this.validateDropdown("legalEntity"));
     // await safeRun(() => this.validateDropdown("payGroup"));
@@ -251,47 +323,97 @@ class StepFinancialDetails extends BaseStep {
     // }
   }
   async validateBonusCard(index, bonusData) {
-  try {
-    const page = this.form.page;
+    try {
+      const page = this.form.page;
 
-    // after save, bonus card shows data as text — not inside ant-select
-    const bonusCard = page.locator(".border.mt-3.p-3.rounded").nth(index);
+      // DEBUG
+      console.log(
+        `validateBonusCard[${index}] bonusData:`,
+        JSON.stringify(bonusData),
+      );
 
-    const cardText = (await bonusCard.innerText()).trim();
-    this.ctx.log(`bonus_${index} card text: "${cardText}"`, "info");
+      const bonusCard = page.locator(".border.mt-3.p-3.rounded").nth(index);
+      const cardText = (await bonusCard.innerText()).trim();
 
-    // check bonus name appears somewhere in the card
-    if (bonusData?.bonusName) {
-      if (cardText.toLowerCase().includes(bonusData.bonusName.toLowerCase())) {
-        this.ctx.log(`bonus_${index}: bonusName "${bonusData.bonusName}" found in card`, "info");
+      // DEBUG
+      console.log(`validateBonusCard[${index}] cardText:`, cardText);
+
+      this.ctx.log(`bonus_${index} card text: "${cardText}"`, "info");
+
+      // check bonus name appears somewhere in the card
+      if (bonusData?.bonusName) {
+        if (
+          cardText.toLowerCase().includes(bonusData.bonusName.toLowerCase())
+        ) {
+          this.ctx.log(
+            `bonus_${index}: bonusName "${bonusData.bonusName}" found in card`,
+            "info",
+          );
+        } else {
+          this._recordMismatch(
+            `bonus_${index}_bonusName`,
+            bonusData.bonusName,
+            "not visible in saved card",
+          );
+        }
+      }
+
+      // check value/percentage
+      if (bonusData?.bonusType === "percentage") {
+        // UI shows: (ctc * percentage / 100) / 12
+        const ctc = Number(
+          this.ctx.final?.ctc || this.ctx.input?.finance?.ctc || 0,
+        );
+        const pct = Number(bonusData.percentage);
+        const expectedMonthly = Math.round((ctc * pct) / 100);
+
+        console.log(
+          `bonus_${index}: ctc=${ctc} pct=${pct} expectedMonthly=${expectedMonthly}`,
+        );
+
+        if (cardText.replace(/,/g, "").includes(String(expectedMonthly))) {
+          this.ctx.log(
+            `bonus_${index}: monthly amount "${expectedMonthly}" found in card`,
+            "info",
+          );
+        } else {
+          this._recordMismatch(
+            `bonus_${index}_percentage`,
+            String(expectedMonthly),
+            "not visible in saved card",
+          );
+        }
+      } else if (bonusData?.bonusType === "value") {
+        // UI shows: value / 12
+        const expectedMonthly = Math.round(Number(bonusData.value));
+
+        console.log(
+          `bonus_${index}: value=${bonusData.value} expectedMonthly=${expectedMonthly}`,
+        );
+
+        if (cardText.replace(/,/g, "").includes(String(expectedMonthly))) {
+          this.ctx.log(
+            `bonus_${index}: monthly amount "${expectedMonthly}" found in card`,
+            "info",
+          );
+        } else {
+          this._recordMismatch(
+            `bonus_${index}_value`,
+            String(expectedMonthly),
+            "not visible in saved card",
+          );
+        }
       } else {
-        this._recordMismatch(
-          `bonus_${index}_bonusName`,
-          bonusData.bonusName,
-          "not visible in saved card"
+        this.ctx.log(
+          `bonus_${index}: no bonusType set — skipping amount check`,
+          "warn",
         );
       }
+    } catch (err) {
+      this.ctx.log(`validateBonusCard[${index}]: ${err.message}`, "error");
+      throw new Error(`validateBonusCard ${index} failed: ${err.message}`);
     }
-
-    // check value/percentage
-    const amount = bonusData?.value || bonusData?.percentage;
-    if (amount) {
-      if (cardText.includes(String(amount))) {
-        this.ctx.log(`bonus_${index}: amount "${amount}" found in card`, "info");
-      } else {
-        this._recordMismatch(
-          `bonus_${index}_value`,
-          String(amount),
-          "not visible in saved card"
-        );
-      }
-    }
-
-  } catch (err) {
-    this.ctx.log(`validateBonusCard[${index}]: ${err.message}`, "error");
-    throw new Error(`validateBonusCard ${index} failed: ${err.message}`);
   }
-}
 }
 
 module.exports = { StepFinancialDetails };

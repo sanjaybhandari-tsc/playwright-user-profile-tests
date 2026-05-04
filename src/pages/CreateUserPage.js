@@ -58,51 +58,63 @@ class CreateUserPage {
       throw new Error(`Drawer did not open: ${err.message}`);
     }
   }
+  async checkForValidationErrors() {
+    const errorElements = this.page.locator(".ant-form-item-explain-error");
+    const errorCount = await errorElements.count();
+
+    if (errorCount === 0) return;
+
+    const errorMessages = [];
+    for (let i = 0; i < errorCount; i++) {
+      const text = (await errorElements.nth(i).innerText()).trim();
+      if (text) errorMessages.push(text);
+    }
+
+    throw new Error(
+      `UI validation error(s) detected — flow stopped:\n${errorMessages
+        .map((msg, i) => `  ${i + 1}. ${msg}`)
+        .join("\n")}`,
+    );
+  }
 
   //  NAVIGATION
   // async nextStep() {
-  //   const btn = this.page.getByRole("button", { name: "Next" });
-  //   // await btn.waitFor();
-  //   await expect(btn).toBeVisible();
-  //   await expect(btn).toBeEnabled();
-  //   await btn.click();
-  //   await this.page.waitForTimeout(500);
+  //   try {
+  //     const btn = this.page.getByRole("button", { name: "Next" });
+  //     await btn.waitFor({ state: "visible" });
+  //     await expect(btn).toBeEnabled({ timeout: 5000 });
+  //     await btn.click();
+  //     await this.page.waitForLoadState("domcontentloaded");
+  //     await this.page.waitForTimeout(500);
+  //   } catch (err) {
+  //     throw new Error(`nextStep() failed: ${err.message}`);
+  //   }
   // }
   async nextStep() {
     try {
       const btn = this.page.getByRole("button", { name: "Next" });
       await btn.waitFor({ state: "visible" });
-      await expect(btn).toBeEnabled({ timeout: 5000 });
-      await btn.click();
+      await expect(btn).toBeEnabled();
       await this.page.waitForLoadState("domcontentloaded");
       await this.page.waitForTimeout(500);
-    } catch (err) {
-      throw new Error(`nextStep() failed: ${err.message}`);
-    }
-  }
-  async nextStep() {
-    try {
-      const btn = this.page.getByRole("button", { name: "Next" });
-      await btn.waitFor({ state: "visible" });
-      await expect(btn).toBeEnabled();
-      await this.page.waitForLoadState("domcontentloaded"); // ← wait for DOM to settle
-      await this.page.waitForTimeout(500); // ← small buffer for animations
       await btn.click();
       await this.page.waitForTimeout(500);
+      //Stop the flow if Ant valdation fails
+      await this.checkForValidationErrors();
     } catch (err) {
       throw new Error(`nextStep() failed: ${err.message}`);
     }
   }
 
-async prevStep() {
-  try {
-    const btn = this.page.getByRole("button", { name: "Back" });
-    await btn.waitFor({ state: "visible" });
-    await btn.click();
-  } catch (err) {
-    throw new Error(`prevStep() failed: ${err.message}`);
+  async prevStep() {
+    try {
+      const btn = this.page.getByRole("button", { name: "Back" });
+      await btn.waitFor({ state: "visible" });
+      await btn.click();
+    } catch (err) {
+      throw new Error(`prevStep() failed: ${err.message}`);
+    }
   }
-}
 
   async createEmployee() {
     try {
@@ -168,20 +180,20 @@ async prevStep() {
     }
   }
   async handleOnboardingEmailPopup(sendEmail = false) {
-  try {
-    const modal = this.page.locator(".ant-modal-content");
-    await modal.waitFor({ state: "visible", timeout: 10000 });
+    try {
+      const modal = this.page.locator(".ant-modal-content");
+      await modal.waitFor({ state: "visible", timeout: 10000 });
 
-    if (sendEmail) {
-      await modal.locator('input[type="checkbox"]').check();
+      if (sendEmail) {
+        await modal.locator('input[type="checkbox"]').check();
+      }
+
+      await modal.getByRole("button", { name: "Confirm" }).click();
+      // Toast waiting is now handled by errorCapture.waitForSuccessToast()
+    } catch (err) {
+      throw new Error(`handleOnboardingEmailPopup() failed: ${err.message}`);
     }
-
-    await modal.getByRole("button", { name: "Confirm" }).click();
-    // Toast waiting is now handled by errorCapture.waitForSuccessToast()
-  } catch (err) {
-    throw new Error(`handleOnboardingEmailPopup() failed: ${err.message}`);
   }
-}
 }
 
 module.exports = { CreateUserPage };
