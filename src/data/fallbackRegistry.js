@@ -20,7 +20,7 @@ const fallbackRegistry = {
   },
 
   financeDetails: {
-    legalEntity: "Collectiwork",
+    legalEntity: "Collectivwork",
     payGroup: "Collectiv - PG",
     taxRegime: "Old Regime"
   }

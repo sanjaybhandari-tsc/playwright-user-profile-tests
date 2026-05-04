@@ -90,9 +90,10 @@ class StepPersonalDetails extends BaseStep {
     await this.selectEmployeeSeries("series", data.employeeSeries);
     await this.fillDate("joiningDate", data.joiningDate);
     await this.form.page.waitForTimeout(3000);
-    await this.captureEmployeeId();
+    // await this.captureEmployeeId();
     await this.selectSkills(data.skills);
     // await this.form.pause(5000);
+    //  await this.checkForValidationErrors();
   }
 
   // async captureEmployeeId() {

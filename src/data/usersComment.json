@@ -1,0 +1,1491 @@
+[
+  {
+    "personalDetails": {
+      "firstName": "Aisha",
+      "middleName": "Priya",
+      "lastName": "Sharma",
+      "dateOfBirth": "1998-03-15",
+      "gender": "Female",
+      "maritalStatus": "Unmarried",
+      "phone": "9876543210",
+      "employeeSeries": "CollectivWork (CW-EMP001)",
+      "joiningDate": "2025-01-10",
+      "skills": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest001@techsuperiors.com",
+      "location": "Dehradun",
+      "role": "SQA",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "On-site",
+      "businessUnit": "Hr teamsss",
+      "holidayPlan": "Holiday Plan (2026)",
+      "department": "HR Department",
+      "designation": "Finance Manager",
+      "grade": "G1",
+      "band": "B1",
+      "reportingManager": "Kamal Pandey (COL-0119)",
+      "hrManager": "Shruti Rai (COL-0062)",
+      "l2Manager": "Kunal Rawat (COL-0118)",
+      "associateManager": [
+        "Ankit Kapoor (COL-4611)"
+      ],
+      "protectDocumentRestrictedAccess": false
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": true,
+      "onboardingPolicy": "April Policy",
+      "shiftPolicy": "Half Weekend",
+      "attendancePolicy": "Attendance Policy",
+      "leavePolicy": "Default Leave Policy",
+      "reimbursementPolicy": "Expense Policy 1",
+      "offboardingPolicy": "New Offboarding Policy",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Tech Superior Legal Entity",
+      "payGroup": "TSC paygroup Dev",
+      "ctc": "12000",
+      "bonuses": [
+        {
+          "bonusName": "Approval Based Performance Bonus (% of CTC)",
+          "bonusType": "Percentage",
+          "percentage": "8",
+          "value": "8000",
+          "payoutMonth": "2026-11",
+          "note": "Annual performance bonus"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": true,
+        "lwfEligible": false
+      },
+      "taxRegime": "New Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Rahul",
+      "middleName": "Kumar",
+      "lastName": "Verma",
+      "dateOfBirth": "1995-07-22",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "phone": "8765432109",
+      "employeeSeries": "Tech Superior (TS-EMP001)",
+      "joiningDate": "2024-11-01",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "MySQL"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest002@techsuperiors.com",
+      "location": "Gurgaon",
+      "role": "Finance Role",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "Remote",
+      "businessUnit": "tech hybrid unit",
+      "holidayPlan": "restricted holiday plan(ggn)",
+      "department": "Finance/Accounts Department",
+      "designation": "Chief Financial Officer (CFO)",
+      "grade": "G1",
+      "band": "B3",
+      "reportingManager": "Ankit Kapoor (COL-4611)",
+      "hrManager": "Sonal B (COL-0068)",
+      "l2Manager": "Suraj Patel (COL-0137)",
+      "associateManager": [
+        "Nirmal Singh (COL-0225)",
+        "Sankalp (COL-0057)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": false,
+      "onboardingPolicy": "TS Intern Onboarding Policy-01",
+      "shiftPolicy": "TS Shift Policy-01",
+      "attendancePolicy": "Gurugram Attendance Policy -01",
+      "leavePolicy": "TS Leave Policy 02",
+      "reimbursementPolicy": "Reimbursement Policy",
+      "offboardingPolicy": "TS Offboarding Policy-01",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Legal Entity-14",
+      "payGroup": "Neologic Pay logic 1",
+      "ctc": "25000",
+      "bonuses": [
+        {
+          "bonusName": "Approval Based Performance Bonus (Fixed)",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "30000",
+          "payoutMonth": "2026-12",
+          "note": "Year-end fixed bonus"
+        },
+        {
+          "bonusName": "Quarterly bonus Pay",
+          "bonusType": "Percentage",
+          "percentage": "5",
+          "value": "15000",
+          "payoutMonth": "2026-09",
+          "note": "Q3 quarterly bonus"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": false,
+        "lwfEligible": true
+      },
+      "taxRegime": "Old Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Priya",
+      "middleName": "Anand",
+      "lastName": "Rawat",
+      "dateOfBirth": "2000-12-05",
+      "gender": "Female",
+      "maritalStatus": "Unmarried",
+      "phone": "7654321098",
+      "employeeSeries": "CollectivWork (CW-EMP001)",
+      "joiningDate": "2025-03-01",
+      "skills": [
+        "UI/UX Design",
+        "Figma",
+        "Adobe XD"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest003@techsuperiors.com",
+      "location": "Dehradun",
+      "role": "HR Role",
+      "employmentStatus": "Intern",
+      "employmentType": "Full Time",
+      "workMode": "Hybrid",
+      "businessUnit": "Hr teamsss",
+      "holidayPlan": "restricted holiday plan(ddn)",
+      "department": "HR Department",
+      "designation": "Compliance Officer",
+      "grade": "grade 9",
+      "band": "B1",
+      "reportingManager": "Shruti Rai (COL-0062)",
+      "hrManager": "Kamal Pandey (COL-0119)",
+      "l2Manager": "Sonal B (COL-0068)",
+      "associateManager": [
+        "Sankalp (COL-0057)"
+      ],
+      "protectDocumentRestrictedAccess": false
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": true,
+      "onboardingPolicy": "test",
+      "shiftPolicy": "Day-Night Shift",
+      "attendancePolicy": "Work From Home Policy",
+      "leavePolicy": "Sick Leave",
+      "reimbursementPolicy": "Testing",
+      "offboardingPolicy": "New Offboarding Policy",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [],
+      "salaryAppraisals": [],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Collectivwork",
+      "payGroup": "Collectiv - PG",
+      "ctc": "8000",
+      "bonuses": [
+        {
+          "bonusName": "earne dbinus joining bonus 1",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "5000",
+          "payoutMonth": "2025-06",
+          "note": "Joining bonus for intern"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": false,
+        "esiEligible": true,
+        "lwfEligible": false
+      },
+      "taxRegime": "New Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Deepak",
+      "middleName": "Singh",
+      "lastName": "Chauhan",
+      "dateOfBirth": "1992-09-18",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "phone": "6543210987",
+      "employeeSeries": "Tech Superior (TS-EMP001)",
+      "joiningDate": "2024-08-15",
+      "skills": [
+        "DevOps",
+        "Docker",
+        "Kubernetes",
+        "AWS"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest004@techsuperiors.com",
+      "location": "Gurgaon",
+      "role": "Admin Role",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "On-site",
+      "businessUnit": "Manager Head",
+      "holidayPlan": "Epistle General Holiday Plan(Delhi and other locations)",
+      "department": "Administration Departments",
+      "designation": "Accounts Manager",
+      "grade": "G1",
+      "band": "B4",
+      "reportingManager": "Nirmal Singh (COL-0225)",
+      "hrManager": "Dwedwe Wedwe (COL-0077)",
+      "l2Manager": "Abhiram (COL-0129)",
+      "associateManager": [
+        "Kunal Rawat (COL-0118)",
+        "Suraj Patel (COL-0137)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": false,
+      "onboardingPolicy": "April Policy",
+      "shiftPolicy": "Roster-Test-1",
+      "attendancePolicy": "Epistle Attendance Policy - Test",
+      "leavePolicy": "Approval Leave policy.",
+      "reimbursementPolicy": "Expense Approval Policy",
+      "offboardingPolicy": "New Offboarding Policy Gurgaon",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Legal Entity - Karnataka",
+      "payGroup": "Paylogic",
+      "ctc": "35000",
+      "bonuses": [
+        {
+          "bonusName": "Approval Based Performance Bonus (% of Gross)",
+          "bonusType": "Percentage",
+          "percentage": "12",
+          "value": "42000",
+          "payoutMonth": "2026-11",
+          "note": "Annual performance review bonus"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": false,
+        "lwfEligible": true
+      },
+      "taxRegime": "Old Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Sneha",
+      "middleName": "Lata",
+      "lastName": "Bisht",
+      "dateOfBirth": "1999-06-30",
+      "gender": "Female",
+      "maritalStatus": "Unmarried",
+      "phone": "5432109876",
+      "employeeSeries": "CollectivWork (CW-EMP001)",
+      "joiningDate": "2025-02-14",
+      "skills": [
+        "Data Analysis",
+        "Power BI",
+        "Excel",
+        "Python"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest005@techsuperiors.com",
+      "location": "Dehradun",
+      "role": "Complete Access Role",
+      "employmentStatus": "Contract",
+      "employmentType": "Full Time",
+      "workMode": "Remote",
+      "businessUnit": "test-9",
+      "holidayPlan": "Timesheet Holiday Plan",
+      "department": "HRMS",
+      "designation": "Financial Controller",
+      "grade": "grade786",
+      "band": "B2",
+      "reportingManager": "Sonal B (COL-0068)",
+      "hrManager": "Nirmal Singh (COL-0225)",
+      "l2Manager": "Tanishq (COL-0138)",
+      "associateManager": [
+        "Abhiram (COL-0129)"
+      ],
+      "protectDocumentRestrictedAccess": false
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": true,
+      "onboardingPolicy": "April Policy",
+      "shiftPolicy": "test shift",
+      "attendancePolicy": "Test Attendance Policy",
+      "leavePolicy": "TSC Leave Policy - 01",
+      "reimbursementPolicy": "expense policy new",
+      "offboardingPolicy": "Epistle Separation Policy test",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Kolkata",
+      "payGroup": "test round off",
+      "ctc": "18000",
+      "bonuses": [
+        {
+          "bonusName": "earned bonus performance bonus 1",
+          "bonusType": "Percentage",
+          "percentage": "7",
+          "value": "12600",
+          "payoutMonth": "2026-10",
+          "note": "Performance-linked payout"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": true,
+        "lwfEligible": false
+      },
+      "taxRegime": "New Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Arjun",
+      "middleName": "Dev",
+      "lastName": "Thapa",
+      "dateOfBirth": "1993-04-11",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "phone": "4321098765",
+      "employeeSeries": "Tech Superior (TS-EMP001)",
+      "joiningDate": "2024-06-01",
+      "skills": [
+        "Node.js",
+        "GraphQL",
+        "MongoDB",
+        "TypeScript"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest006@techsuperiors.com",
+      "location": "Gurgaon",
+      "role": "Limited Access Roles",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "Hybrid",
+      "businessUnit": "Buisness unit -001",
+      "holidayPlan": "New year",
+      "department": "IT Department",
+      "designation": "Finance Manager",
+      "grade": "G1",
+      "band": "B3",
+      "reportingManager": "Kunal Rawat (COL-0118)",
+      "hrManager": "Ankit Kapoor (COL-4611)",
+      "l2Manager": "Kartikey As Manager (COL-0029)",
+      "associateManager": [
+        "Dwedwe Wedwe (COL-0077)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": false,
+      "onboardingPolicy": "TS Intern Onboarding Policy-01",
+      "shiftPolicy": "Shift-based",
+      "attendancePolicy": "Epistle Remote Policy - Test",
+      "leavePolicy": "Approval leave Policy",
+      "reimbursementPolicy": "multilevel policy test",
+      "offboardingPolicy": "off boarding policy -1",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Legal Entity - Karnataka",
+      "payGroup": "Monthly India Standard",
+      "ctc": "28000",
+      "bonuses": [
+        {
+          "bonusName": "earned bonus referrral bonus 1",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "10000",
+          "payoutMonth": "2026-07",
+          "note": "Referral bonus for Q2 hire"
+        },
+        {
+          "bonusName": "Approval Based Performance Bonus (% of CTC)",
+          "bonusType": "Percentage",
+          "percentage": "9",
+          "value": "25200",
+          "payoutMonth": "2026-11",
+          "note": "Year-end performance payout"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": false,
+        "lwfEligible": true
+      },
+      "taxRegime": "Old Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Kavya",
+      "middleName": "Rani",
+      "lastName": "Joshi",
+      "dateOfBirth": "2001-01-25",
+      "gender": "Female",
+      "maritalStatus": "Unmarried",
+      "phone": "3210987654",
+      "employeeSeries": "CollectivWork (CW-EMP001)",
+      "joiningDate": "2025-04-01",
+      "skills": [
+        "Content Writing",
+        "SEO",
+        "WordPress"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest007@techsuperiors.com",
+      "location": "Dehradun",
+      "role": "marketting research",
+      "employmentStatus": "Intern",
+      "employmentType": "Part Time",
+      "workMode": "Remote",
+      "businessUnit": "test1",
+      "holidayPlan": "Epistle Bangalore Holiday List",
+      "department": "Hr Managers Department",
+      "designation": "Compliance Officer",
+      "grade": "new grade",
+      "band": "B1",
+      "reportingManager": "Suraj Patel (COL-0137)",
+      "hrManager": "Sonal B (COL-0068)",
+      "l2Manager": "Test User (COL-0161)",
+      "associateManager": [
+        "Shruti Rai (COL-0062)"
+      ],
+      "protectDocumentRestrictedAccess": false
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": true,
+      "onboardingPolicy": "test",
+      "shiftPolicy": "testing10 policy",
+      "attendancePolicy": "Epistle Delhi Attendance Policy - Test",
+      "leavePolicy": "leave policy 0001",
+      "reimbursementPolicy": "fex",
+      "offboardingPolicy": "Testing Needed",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        }
+      ],
+      "medical": [],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [],
+      "salaryAppraisals": [],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Nirmal",
+      "payGroup": "test round off",
+      "ctc": "6000",
+      "bonuses": [
+        {
+          "bonusName": "earne dbinus joining bonus 1",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "3000",
+          "payoutMonth": "2025-07",
+          "note": "Intern joining incentive"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": false,
+        "esiEligible": true,
+        "lwfEligible": false
+      },
+      "taxRegime": "New Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Manish",
+      "middleName": "Raj",
+      "lastName": "Gupta",
+      "dateOfBirth": "1990-08-03",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "phone": "2109876543",
+      "employeeSeries": "Tech Superior (TS-EMP001)",
+      "joiningDate": "2024-04-01",
+      "skills": [
+        "Project Management",
+        "Agile",
+        "Jira",
+        "Confluence"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest008@techsuperiors.com",
+      "location": "Gurgaon",
+      "role": "Manager Role",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "On-site",
+      "businessUnit": "Manager Head",
+      "holidayPlan": "Holiday Plan (2026)",
+      "department": "Hr Manager It Department-01",
+      "designation": "Finance Manager",
+      "grade": "G1",
+      "band": "B5",
+      "reportingManager": "Abhiram (COL-0129)",
+      "hrManager": "Kamal Pandey (COL-0119)",
+      "l2Manager": "Sankalp (COL-0057)",
+      "associateManager": [
+        "Rohan Pratap Negi (TS-EMP015)",
+        "Tanishq (COL-0138)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": false,
+      "onboardingPolicy": "April Policy",
+      "shiftPolicy": "same shift 01",
+      "attendancePolicy": "New Attendance Policy Configuration",
+      "leavePolicy": "negative leave 1",
+      "reimbursementPolicy": "Expense Polic (Multi-Approver)",
+      "offboardingPolicy": "new off-boarding policy (for manager)",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "tech hybrid34",
+      "payGroup": "Paylogic 1  and 2 (12l-13l)",
+      "ctc": "55000",
+      "bonuses": [
+        {
+          "bonusName": "Approval Based Performance Bonus (% of Gross)",
+          "bonusType": "Percentage",
+          "percentage": "15",
+          "value": "82500",
+          "payoutMonth": "2026-12",
+          "note": "Senior manager performance bonus"
+        },
+        {
+          "bonusName": "earned bonus retention1",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "20000",
+          "payoutMonth": "2026-06",
+          "note": "Retention bonus for 2-year milestone"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": false,
+        "lwfEligible": true
+      },
+      "taxRegime": "Old Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Tanya",
+      "middleName": "Mehra",
+      "lastName": "Kapoor",
+      "dateOfBirth": "1996-02-17",
+      "gender": "Female",
+      "maritalStatus": "Married",
+      "phone": "1098765432",
+      "employeeSeries": "CollectivWork (CW-EMP001)",
+      "joiningDate": "2024-12-02",
+      "skills": [
+        "Accounting",
+        "Tally",
+        "GST Filing",
+        "Financial Reporting"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest009@techsuperiors.com",
+      "location": "Gurgaon",
+      "role": "Finance Role",
+      "employmentStatus": "Permanent",
+      "employmentType": "Full Time",
+      "workMode": "On-site",
+      "businessUnit": "test-1020",
+      "holidayPlan": "Epistle Maharashtra Holiday Plan",
+      "department": "Finance/Accounts Department",
+      "designation": "Chief Financial Officer (CFO)",
+      "grade": "G1",
+      "band": "B4",
+      "reportingManager": "Sankalp (COL-0057)",
+      "hrManager": "Kunal Rawat (COL-0118)",
+      "l2Manager": "Rohan Pratap Negi (TS-EMP015)",
+      "associateManager": [
+        "Nirmal Singh (COL-0225)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": false,
+      "onboardingPolicy": "April Policy",
+      "shiftPolicy": "Epistle Shift (9:00 AM to 7:30 PM) Test",
+      "attendancePolicy": "Epistle Remote Policy - Test",
+      "leavePolicy": "test negative balance",
+      "reimbursementPolicy": "reimbursements(2)",
+      "offboardingPolicy": "new of work",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "legal entity - Maharashtra",
+      "payGroup": "Monthly India Standard",
+      "ctc": "32000",
+      "bonuses": [
+        {
+          "bonusName": "earned bonus incentive 1",
+          "bonusType": "Percentage",
+          "percentage": "10",
+          "value": "32000",
+          "payoutMonth": "2026-11",
+          "note": "Annual incentive based on KPIs"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": true,
+        "esiEligible": false,
+        "lwfEligible": true
+      },
+      "taxRegime": "Old Regime"
+    }
+  },
+  {
+    "personalDetails": {
+      "firstName": "Vikrant",
+      "middleName": "Mohan",
+      "lastName": "Pandey",
+      "dateOfBirth": "1994-05-09",
+      "gender": "Male",
+      "maritalStatus": "Unmarried",
+      "phone": "9012345678",
+      "employeeSeries": "Tech Superior (TS-EMP001)",
+      "joiningDate": "2025-01-20",
+      "skills": [
+        "Cybersecurity",
+        "Penetration Testing",
+        "Network Security"
+      ]
+    },
+    "workDetails": {
+      "workEmail": "sanjay.bhandari+pwtest010@techsuperiors.com",
+      "location": "Dehradun",
+      "role": "Admin Role for Prod",
+      "employmentStatus": "Consultant",
+      "employmentType": "Full Time",
+      "workMode": "Client Site",
+      "businessUnit": "test-00567",
+      "holidayPlan": "restricted holiday plan(ddn)",
+      "department": "IT Department",
+      "designation": "Accounts Manager",
+      "grade": "G1",
+      "band": "B3",
+      "reportingManager": "Abhiram (COL-0129)",
+      "hrManager": "Shruti Rai (COL-0062)",
+      "l2Manager": "Kartikey As Manager (COL-0029)",
+      "associateManager": [
+        "Sonal B (COL-0068)",
+        "Sankalp (COL-0057)"
+      ],
+      "protectDocumentRestrictedAccess": true
+    },
+    "policySetting": {
+      "isProbationDurationApplicable": true,
+      "onboardingPolicy": "TS Intern Onboarding Policy-01",
+      "shiftPolicy": "night shift policy000",
+      "attendancePolicy": "Work From Home Policy",
+      "leavePolicy": "test 8988",
+      "reimbursementPolicy": "policy of rembeirshment",
+      "offboardingPolicy": "test off-boarding with reminder letter of change of status",
+      "overtimePolicy": "Overtime Policy"
+    },
+    "uploadDocument": {
+      "employeeAgreements": [
+        {
+          "fileName": "agreement.pdf",
+          "filePath": "test-data/files/agreement.pdf"
+        }
+      ],
+      "miscellaneous": [],
+      "education": [
+        {
+          "fileName": "degree.pdf",
+          "filePath": "test-data/files/degree.pdf"
+        }
+      ],
+      "previousEmployment": [
+        {
+          "fileName": "experience.pdf",
+          "filePath": "test-data/files/experience.pdf"
+        }
+      ],
+      "onboarding": [
+        {
+          "fileName": "onboarding.pdf",
+          "filePath": "test-data/files/onboarding.pdf"
+        }
+      ],
+      "incomeTax": [
+        {
+          "fileName": "pan.pdf",
+          "filePath": "test-data/files/pan.pdf"
+        }
+      ],
+      "identity": [
+        {
+          "fileName": "aadhar.pdf",
+          "filePath": "test-data/files/aadhar.pdf"
+        },
+        {
+          "fileName": "passport.pdf",
+          "filePath": "test-data/files/passport.pdf"
+        }
+      ],
+      "medical": [
+        {
+          "fileName": "medical.pdf",
+          "filePath": "test-data/files/medical.pdf"
+        }
+      ],
+      "payroll": [
+        {
+          "fileName": "bank_details.pdf",
+          "filePath": "test-data/files/bank_details.pdf"
+        }
+      ],
+      "exit": [],
+      "employeeLetters": [
+        {
+          "fileName": "offer_letter.pdf",
+          "filePath": "test-data/files/offer_letter.pdf"
+        }
+      ],
+      "assets": [
+        {
+          "fileName": "laptop_hand_over.pdf",
+          "filePath": "test-data/files/laptop_hand_over.pdf"
+        }
+      ],
+      "salaryAppraisals": [
+        {
+          "fileName": "appraisal_2025.pdf",
+          "filePath": "test-data/files/appraisal_2025.pdf"
+        }
+      ],
+      "signatures": [
+        {
+          "fileName": "signature.pdf",
+          "filePath": "test-data/files/signature.pdf"
+        }
+      ]
+    },
+    "financeDetails": {
+      "legalEntity": "Test entity 01",
+      "payGroup": "Monthly India Standard",
+      "ctc": "15000",
+      "bonuses": [
+        {
+          "bonusName": "Approval Based Performance Bonus (Fixed)",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "25000",
+          "payoutMonth": "2026-12",
+          "note": "Consultant annual bonus"
+        },
+        {
+          "bonusName": "earned bonus overtime pay1",
+          "bonusType": "Amount",
+          "percentage": "0",
+          "value": "8000",
+          "payoutMonth": "2026-09",
+          "note": "Overtime compensation for Q3"
+        }
+      ],
+      "payrollDetails": {
+        "providentFundEligible": false,
+        "esiEligible": false,
+        "lwfEligible": false
+      },
+      "taxRegime": "New Regime"
+    }
+  }
+]
